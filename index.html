@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistical Analysis - Complete Study Notes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 25px;
+            margin: -30px -30px 25px -30px;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .section-header h2 {
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-header .duration {
+            margin-left: auto;
+            font-size: 0.6em;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        h3 {
+            color: #667eea;
+            margin: 25px 0 15px 0;
+            font-size: 1.4em;
+        }
+        
+        h4 {
+            color: #764ba2;
+            margin: 20px 0 10px 0;
+            font-size: 1.2em;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .formula {
+            background: #fff;
+            border: 2px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        .example {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .example-title {
+            color: #2196F3;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .key-point {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .key-point strong {
+            color: #f57c00;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .note {
+            background: #f3e5f5;
+            border-left: 4px solid #9c27b0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .comparison-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #667eea;
+        }
+        
+        .comparison-card h4 {
+            margin-top: 0;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .toc h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .toc ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .toc li {
+            padding: 8px 0;
+        }
+        
+        .toc a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .toc a:hover {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Statistical Analysis</h1>
+            <p>Complete Study Notes with Examples</p>
+        </div>
+        
+        <div class="content">
+            <div class="toc">
+                <h2>📑 Table of Contents</h2>
+                <ul>
+                    <li><a href="#section1">1. Measures of Central Tendency & Dispersion</a></li>
+                    <li><a href="#section2">2. Correlation & Trend Analysis</a></li>
+                    <li><a href="#section3">3. Introduction to Hypothesis Testing</a></li>
+                    <li><a href="#section4">4. Visualizing Statistical Data</a></li>
+                    <li><a href="#section5">5. Excel for Statistical Analysis</a></li>
+                    <li><a href="#section6">6. Real-Life Scenario-Based Problems</a></li>
+                    <li><a href="#section7">7. Predictive Analysis Concepts</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 1: Mean, Median, Mode, Range, Variance, SD -->
+            <div class="section" id="section1">
+                <div class="section-header">
+                    <h2>1. Measures of Central Tendency & Dispersion<span class="duration">4 Hours</span></h2>
+                </div>
+                
+                <h3>Measures of Central Tendency</h3>
+                <p>Central tendency measures tell us where the "center" or "typical" value of our data lies. Think of it as finding the most representative value in a dataset.</p>
+                
+                <h4>1. Mean (Average)</h4>
+                <p>The mean is the sum of all values divided by the number of values. It's the most commonly used measure.</p>
+                
+                <div class="formula">
+                    Mean = (Sum of all values) / (Number of values)<br>
+                    μ = (x₁ + x₂ + x₃ + ... + xₙ) / n
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Student Test Scores</div>
+                    <p>Five students scored: 75, 82, 90, 68, 85</p>
+                    <p><strong>Mean</strong> = (75 + 82 + 90 + 68 + 85) / 5 = 400 / 5 = <strong>80</strong></p>
+                    <p>The average score is 80.</p>
+                </div>
+                
+                <div class="key-point">
+                    <strong>When to use Mean:</strong> Best for data without extreme outliers (very high or very low values that don't represent the typical data).
+                </div>
+                
+                <h4>2. Median (Middle Value)</h4>
+                <p>The median is the middle value when data is arranged in order. If there are two middle values, take their average.</p>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: House Prices in a Neighborhood</div>
+                    <p>Seven houses sold for: $200,000, $220,000, $215,000, $950,000, $210,000, $225,000, $205,000</p>
+                    <p><strong>Step 1:</strong> Arrange in order: $200,000, $205,000, $210,000, <strong>$215,000</strong>, $220,000, $225,000, $950,000</p>
+                    <p><strong>Median</strong> = <strong>$215,000</strong> (the middle value)</p>
+                    <p><strong>Mean</strong> = $317,857 (much higher due to the $950,000 house)</p>
+                    <p>Notice how the median ($215,000) better represents typical house prices than the mean!</p>
+                </div>
+                
+                <div class="key-point">
+                    <strong>When to use Median:</strong> Best when you have outliers or skewed data. It's not affected by extreme values.
+                </div>
+                
+                <h4>3. Mode (Most Frequent)</h4>
+                <p>The mode is the value that appears most frequently in the dataset.</p>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Shoe Sizes in a Store</div>
+                    <p>Sizes sold today: 7, 8, 8, 9, 7, 8, 10, 8, 9, 8</p>
+                    <p><strong>Mode</strong> = <strong>8</strong> (appears 5 times, more than any other size)</p>
+                    <p>This helps the store know which size to stock more of!</p>
+                </div>
+                
+                <div class="key-point">
+                    <strong>When to use Mode:</strong> Best for categorical data or when you want to know the most common occurrence.
+                </div>
+                
+                <h3>Measures of Dispersion</h3>
+                <p>Dispersion measures tell us how spread out our data is. Are all values close together or scattered widely?</p>
+                
+                <h4>1. Range</h4>
+                <p>The range is simply the difference between the highest and lowest values.</p>
+                
+                <div class="formula">
+                    Range = Maximum value - Minimum value
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Daily Temperatures</div>
+                    <p>Temperatures this week: 68°F, 72°F, 75°F, 70°F, 73°F, 69°F, 71°F</p>
+                    <p><strong>Range</strong> = 75°F - 68°F = <strong>7°F</strong></p>
+                    <p>The temperature varied by 7 degrees this week.</p>
+                </div>
+                
+                <h4>2. Variance</h4>
+                <p>Variance measures how far each value is from the mean, on average. It gives us a precise measure of spread.</p>
+                
+                <div class="formula">
+                    Variance (σ²) = Σ(x - μ)² / n<br>
+                    Where: x = each value, μ = mean, n = number of values
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Calculating Variance</div>
+                    <p>Data: 4, 8, 6, 5, 3</p>
+                    <p><strong>Step 1:</strong> Find mean = (4+8+6+5+3)/5 = 5.2</p>
+                    <p><strong>Step 2:</strong> Find each deviation from mean:</p>
+                    <ul>
+                        <li>(4 - 5.2)² = 1.44</li>
+                        <li>(8 - 5.2)² = 7.84</li>
+                        <li>(6 - 5.2)² = 0.64</li>
+                        <li>(5 - 5.2)² = 0.04</li>
+                        <li>(3 - 5.2)² = 4.84</li>
+                    </ul>
+                    <p><strong>Step 3:</strong> Variance = (1.44+7.84+0.64+0.04+4.84)/5 = <strong>2.96</strong></p>
+                </div>
+                
+                <h4>3. Standard Deviation (SD)</h4>
+                <p>Standard deviation is the square root of variance. It's easier to interpret because it's in the same units as our original data.</p>
+                
+                <div class="formula">
+                    Standard Deviation (σ) = √Variance
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Continuing from Above</div>
+                    <p>Variance = 2.96</p>
+                    <p><strong>Standard Deviation</strong> = √2.96 = <strong>1.72</strong></p>
+                    <p>This means values typically differ from the mean by about 1.72 units.</p>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Interpretation:</strong> A small SD means data is clustered close to the mean. A large SD means data is spread out widely.
+                </div>
+                
+                <h3>Interpreting Descriptive Statistics</h3>
+                
+                <div class="comparison-table">
+                    <div class="comparison-card">
+                        <h4>Low Variability Dataset</h4>
+                        <p>Exam scores: 78, 79, 80, 81, 82</p>
+                        <p>Mean = 80, SD = 1.41</p>
+                        <p><strong>Interpretation:</strong> Students performed consistently. Most scored close to 80.</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h4>High Variability Dataset</h4>
+                        <p>Exam scores: 50, 65, 80, 95, 100</p>
+                        <p>Mean = 78, SD = 18.71</p>
+                        <p><strong>Interpretation:</strong> Students performed very differently. Wide range of abilities.</p>
+                    </div>
+                </div>
+                
+                <h3>Calculating Measures Using Tools</h3>
+                
+                <h4>Manual Calculation Tips</h4>
+                <ol>
+                    <li>Always organize your data first (sort it in order)</li>
+                    <li>Use a calculator or spreadsheet for large datasets</li>
+                    <li>Double-check your work, especially with variance calculations</li>
+                    <li>Round final answers appropriately (usually 2 decimal places)</li>
+                </ol>
+                
+                <h4>Quick Reference Table</h4>
+                <table>
+                    <tr>
+                        <th>Measure</th>
+                        <th>What it tells us</th>
+                        <th>Best used when</th>
+                    </tr>
+                    <tr>
+                        <td>Mean</td>
+                        <td>Average value</td>
+                        <td>No extreme outliers</td>
+                    </tr>
+                    <tr>
+                        <td>Median</td>
+                        <td>Middle value</td>
+                        <td>Outliers present</td>
+                    </tr>
+                    <tr>
+                        <td>Mode</td>
+                        <td>Most common value</td>
+                        <td>Categorical data</td>
+                    </tr>
+                    <tr>
+                        <td>Range</td>
+                        <td>Spread (simple)</td>
+                        <td>Quick overview</td>
+                    </tr>
+                    <tr>
+                        <td>Variance</td>
+                        <td>Average squared deviation</td>
+                        <td>Statistical calculations</td>
+                    </tr>
+                    <tr>
+                        <td>Standard Deviation</td>
+                        <td>Typical deviation from mean</td>
+                        <td>Most practical measure of spread</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Section 2: Correlation & Trend Analysis -->
+            <div class="section" id="section2">
+                <div class="section-header">
+                    <h2>2. Correlation & Trend Analysis<span class="duration">3 Hours</span></h2>
+                </div>
+                
+                <h3>Understanding Correlation</h3>
+                <p>Correlation measures the relationship between two variables. It tells us if two things tend to change together.</p>
+                
+                <h4>Types of Correlation</h4>
+                
+                <div class="comparison-table">
+                    <div class="comparison-card">
+                        <h4>✅ Positive Correlation</h4>
+                        <p>When one variable increases, the other also increases.</p>
+                        <p><strong>Example:</strong> Study time and exam scores. More study time → Higher scores.</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h4>❌ Negative Correlation</h4>
+                        <p>When one variable increases, the other decreases.</p>
+                        <p><strong>Example:</strong> Speed and travel time. Faster speed → Less time.</p>
+                    </div>
+                </div>
+                
+                <div class="comparison-card" style="margin-top: 20px;">
+                    <h4>⭕ No Correlation</h4>
+                    <p>Variables don't have a consistent relationship.</p>
+                    <p><strong>Example:</strong> Shoe size and IQ. No relationship expected.</p>
+                </div>
+                
+                <div class="note">
+                    <strong>Important:</strong> Correlation does NOT mean causation! Just because two things are correlated doesn't mean one causes the other.
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Ice Cream Sales and Drowning</div>
+                    <p>Ice cream sales and drowning incidents show a positive correlation.</p>
+                    <p><strong>Does ice cream cause drowning?</strong> NO!</p>
+                    <p>Both increase in summer due to hot weather (the real cause). This is called a "spurious correlation."</p>
+                </div>
+                
+                <h3>Calculating Correlation Coefficients</h3>
+                <p>The correlation coefficient (r) measures the strength and direction of a linear relationship. It ranges from -1 to +1.</p>
+                
+                <div class="formula">
+                    r = -1 to +1<br>
+                    Where:<br>
+                    +1 = Perfect positive correlation<br>
+                    0 = No correlation<br>
+                    -1 = Perfect negative correlation
+                </div>
+                
+                <h4>Interpreting Correlation Coefficient</h4>
+                <table>
+                    <tr>
+                        <th>r value</th>
+                        <th>Strength</th>
+                        <th>Interpretation</th>
+                    </tr>
+                    <tr>
+                        <td>0.00 to 0.19</td>
+                        <td>Very weak</td>
+                        <td>Almost no relationship</td>
+                    </tr>
+                    <tr>
+                        <td>0.20 to 0.39</td>
+                        <td>Weak</td>
+                        <td>Slight relationship</td>
+                    </tr>
+                    <tr>
+                        <td>0.40 to 0.59</td>
+                        <td>Moderate</td>
+                        <td>Noticeable relationship</td>
+                    </tr>
+                    <tr>
+                        <td>0.60 to 0.79</td>
+                        <td>Strong</td>
+                        <td>Clear relationship</td>
+                    </tr>
+                    <tr>
+                        <td>0.80 to 1.00</td>
+                        <td>Very strong</td>
+                        <td>Very clear relationship</td>
+                    </tr>
+                </table>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Advertising Spend vs Sales</div>
+                    <p>A company calculates r = 0.85 between advertising spend and sales.</p>
+                    <p><strong>Interpretation:</strong></p>
+                    <ul>
+                        <li>Very strong positive correlation</li>
+                        <li>When advertising increases, sales tend to increase significantly</li>
+                        <li>85% of the relationship is linear</li>
+                    </ul>
+                </div>
+                
+                <h3>Introduction to Trend Analysis</h3>
+                <p>Trend analysis helps us identify patterns in data over time. It answers: "Is this going up, down, or staying the same?"</p>
+                
+                <h4>Types of Trends</h4>
+                <ol>
+                    <li><strong>Upward Trend:</strong> Values increase over time (e.g., company revenue growing)</li>
+                    <li><strong>Downward Trend:</strong> Values decrease over time (e.g., product returns declining)</li>
+                    <li><strong>Horizontal/Flat Trend:</strong> Values stay relatively constant</li>
+                    <li><strong>Seasonal Trend:</strong> Regular patterns that repeat (e.g., holiday sales spikes)</li>
+                    <li><strong>Cyclical Trend:</strong> Long-term up and down patterns (e.g., economic cycles)</li>
+                </ol>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Monthly Website Visitors</div>
+                    <table>
+                        <tr>
+                            <th>Month</th>
+                            <th>Visitors</th>
+                            <th>Observation</th>
+                        </tr>
+                        <tr>
+                            <td>January</td>
+                            <td>5,000</td>
+                            <td>Starting point</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>5,500</td>
+                            <td>+10% increase</td>
+                        </tr>
+                        <tr>
+                            <td>March</td>
+                            <td>6,200</td>
+                            <td>+12.7% increase</td>
+                        </tr>
+                        <tr>
+                            <td>April</td>
+                            <td>6,800</td>
+                            <td>+9.7% increase</td>
+                        </tr>
+                    </table>
+                    <p><strong>Trend:</strong> Clear upward trend. Website traffic is growing consistently.</p>
+                </div>
+                
+                <h3>Identifying Patterns and Trends Over Time</h3>
+                
+                <h4>Steps to Identify Trends</h4>
+                <ol>
+                    <li><strong>Collect time-series data:</strong> Gather data points at regular intervals</li>
+                    <li><strong>Plot the data:</strong> Create a line graph to visualize changes</li>
+                    <li><strong>Look for patterns:</strong> Identify general direction and any repeating patterns</li>
+                    <li><strong>Calculate moving averages:</strong> Smooth out short-term fluctuations</li>
+                    <li><strong>Make predictions:</strong> Use the trend to forecast future values</li>
+                </ol>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Retail Store Sales Analysis</div>
+                    <p><strong>Quarterly Sales (in thousands):</strong></p>
+                    <p>Q1 2023: $120 | Q2 2023: $150 | Q3 2023: $130 | Q4 2023: $200</p>
+                    <p>Q1 2024: $140 | Q2 2024: $170 | Q3 2024: $155 | Q4 2024: $230</p>
+                    
+                    <p><strong>Observations:</strong></p>
+                    <ul>
+                        <li><strong>Overall trend:</strong> Upward (sales increasing year-over-year)</li>
+                        <li><strong>Seasonal pattern:</strong> Q4 always highest (holiday shopping)</li>
+                        <li><strong>Dip in Q3:</strong> Consistent pattern (back-to-school competition?)</li>
+                    </ul>
+                    
+                    <p><strong>Business insight:</strong> Prepare extra inventory for Q4, plan promotions for Q3 to boost sales.</p>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Practical Tip:</strong> Always look at multiple time periods before confirming a trend. One or two data points don't make a trend!
+                </div>
+            </div>
+
+            <!-- Section 3: Hypothesis Testing -->
+            <div class="section" id="section3">
+                <div class="section-header">
+                    <h2>3. Introduction to Hypothesis Testing<span class="duration">3 Hours</span></h2>
+                </div>
+                
+                <h3>What is Hypothesis Testing?</h3>
+                <p>Hypothesis testing is a statistical method to make decisions about a population based on sample data. It's like being a detective – you have a theory, and you use evidence to support or reject it.</p>
+                
+                <div class="example">
+                    <div class="example-title">📝 Real-World Example</div>
+                    <p><strong>Scenario:</strong> A pharmaceutical company claims their new medicine reduces headaches within 30 minutes for 80% of patients.</p>
+                    <p><strong>Question:</strong> Is this claim true, or are they exaggerating?</p>
+                    <p><strong>Solution:</strong> We use hypothesis testing! Test the medicine on a sample of patients and see if the results support the claim.</p>
+                </div>
+                
+                <h3>Null and Alternative Hypotheses</h3>
+                <p>Every hypothesis test starts with two competing statements:</p>
+                
+                <h4>Null Hypothesis (H₀)</h4>
+                <p>The null hypothesis is the "status quo" or "default" position. It usually states that there is NO effect or NO difference.</p>
+                
+                <div class="formula">
+                    H₀: There is no significant effect/difference<br>
+                    (The claim we're trying to disprove)
+                </div>
+                
+                <h4>Alternative Hypothesis (H₁ or Hₐ)</h4>
+                <p>The alternative hypothesis is what we're trying to prove. It states there IS an effect or difference.</p>
+                
+                <div class="formula">
+                    H₁: There is a significant effect/difference<br>
+                    (What we believe is true)
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: New Teaching Method</div>
+                    <p><strong>Situation:</strong> A school wants to test if a new teaching method improves test scores.</p>
+                    <p><strong>Current average score:</strong> 75%</p>
+                    
+                    <p><strong>H₀ (Null Hypothesis):</strong> The new teaching method does NOT improve scores. Average score remains 75%.</p>
+                    <p><strong>H₁ (Alternative Hypothesis):</strong> The new teaching method DOES improve scores. Average score is greater than 75%.</p>
+                    
+                    <p>We collect data, run the test, and either reject H₀ (the new method works!) or fail to reject H₀ (not enough evidence).</p>
+                </div>
+                
+                <div class="comparison-table">
+                    <div class="comparison-card">
+                        <h4>Think of it Like a Trial</h4>
+                        <p><strong>H₀:</strong> Defendant is innocent (presumed)</p>
+                        <p><strong>H₁:</strong> Defendant is guilty</p>
+                        <p>We need strong evidence to reject innocence!</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h4>Business Example</h4>
+                        <p><strong>H₀:</strong> New ad campaign has no effect on sales</p>
+                        <p><strong>H₁:</strong> New ad campaign increases sales</p>
+                        <p>Test with data before making big investments!</p>
+                    </div>
+                </div>
+                
+                <h3>Type I and Type II Errors</h3>
+                <p>In hypothesis testing, we can make two types of mistakes:</p>
+                
+                <h4>Type I Error (False Positive) - α</h4>
+                <p>Rejecting the null hypothesis when it's actually true. We say there's an effect when there isn't.</p>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Type I Error</div>
+                    <p><strong>Medical test scenario:</strong> Test says you have a disease, but you're actually healthy.</p>
+                    <p><strong>Business scenario:</strong> You conclude the new product is better, but it's actually the same. You waste money launching it.</p>
+                </div>
+                
+                <h4>Type II Error (False Negative) - β</h4>
+                <p>Failing to reject the null hypothesis when it's actually false. We say there's NO effect when there IS one.</p>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Type II Error</div>
+                    <p><strong>Medical test scenario:</strong> Test says you're healthy, but you actually have the disease.</p>
+                    <p><strong>Business scenario:</strong> You conclude the new marketing strategy doesn't work, but it actually does. You miss an opportunity.</p>
+                </div>
+                
+                <h4>Error Types Comparison Table</h4>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>H₀ is Actually TRUE</th>
+                        <th>H₀ is Actually FALSE</th>
+                    </tr>
+                    <tr>
+                        <td><strong>We Reject H₀</strong></td>
+                        <td style="background: #ffcdd2;">❌ Type I Error (α)<br>False Positive</td>
+                        <td style="background: #c8e6c9;">✅ Correct Decision</td>
+                    </tr>
+                    <tr>
+                        <td><strong>We Fail to Reject H₀</strong></td>
+                        <td style="background: #c8e6c9;">✅ Correct Decision</td>
+                        <td style="background: #ffcdd2;">❌ Type II Error (β)<br>False Negative</td>
+                    </tr>
+                </table>
+                
+                <div class="key-point">
+                    <strong>Significance Level (α):</strong> Usually set at 0.05 (5%). This means we accept a 5% chance of making a Type I error. It's our tolerance for being wrong.
+                </div>
+                
+                <h3>Basic Steps in Hypothesis Testing</h3>
+                
+                <div class="formula">
+                    <strong>The 5-Step Process:</strong>
+                </div>
+                
+                <ol>
+                    <li>
+                        <strong>State the Hypotheses (H₀ and H₁)</strong>
+                        <p>Clearly define what you're testing.</p>
+                    </li>
+                    <li>
+                        <strong>Choose Significance Level (α)</strong>
+                        <p>Usually 0.05 (5% risk of Type I error).</p>
+                    </li>
+                    <li>
+                        <strong>Collect Data and Calculate Test Statistic</strong>
+                        <p>Gather sample data and calculate the appropriate test statistic (e.g., t-statistic, z-statistic).</p>
+                    </li>
+                    <li>
+                        <strong>Determine the p-value</strong>
+                        <p>The p-value tells us the probability of getting our results if H₀ is true.</p>
+                    </li>
+                    <li>
+                        <strong>Make a Decision</strong>
+                        <p>If p-value ≤ α: Reject H₀ (evidence supports H₁)</p>
+                        <p>If p-value > α: Fail to reject H₀ (not enough evidence)</p>
+                    </li>
+                </ol>
+                
+                <div class="example">
+                    <div class="example-title">📝 Complete Example: Coffee Shop Wait Time</div>
+                    <p><strong>Problem:</strong> A coffee shop claims average wait time is 5 minutes. Customers complain it's longer. Test this claim.</p>
+                    
+                    <p><strong>Step 1: State Hypotheses</strong></p>
+                    <ul>
+                        <li>H₀: Average wait time = 5 minutes</li>
+                        <li>H₁: Average wait time > 5 minutes</li>
+                    </ul>
+                    
+                    <p><strong>Step 2: Set Significance Level</strong></p>
+                    <ul><li>α = 0.05 (5%)</li></ul>
+                    
+                    <p><strong>Step 3: Collect Data</strong></p>
+                    <ul><li>Sample 30 customers: Average wait = 5.8 minutes, SD = 1.2 minutes</li></ul>
+                    
+                    <p><strong>Step 4: Calculate p-value</strong></p>
+                    <ul><li>Using statistical software: p-value = 0.002</li></ul>
+                    
+                    <p><strong>Step 5: Make Decision</strong></p>
+                    <ul>
+                        <li>p-value (0.002) < α (0.05)</li>
+                        <li><strong>Decision: Reject H₀</strong></li>
+                        <li><strong>Conclusion:</strong> Evidence shows wait time is significantly longer than 5 minutes. The shop needs to improve service!</li>
+                    </ul>
+                </div>
+                
+                <div class="note">
+                    <strong>Remember:</strong> "Failing to reject H₀" is NOT the same as "accepting H₀." It just means we don't have enough evidence to say H₀ is wrong. Absence of evidence is not evidence of absence!
+                </div>
+            </div>
+
+            <!-- Section 4: Visualizing Statistical Data -->
+            <div class="section" id="section4">
+                <div class="section-header">
+                    <h2>4. Visualizing Statistical Data<span class="duration">2 Hours</span></h2>
+                </div>
+                
+                <h3>Choosing Appropriate Visualizations</h3>
+                <p>The right chart makes data easy to understand. The wrong chart confuses people. Here's how to choose:</p>
+                
+                <table>
+                    <tr>
+                        <th>Your Goal</th>
+                        <th>Best Chart Type</th>
+                        <th>When to Use</th>
+                    </tr>
+                    <tr>
+                        <td>Show distribution</td>
+                        <td>Histogram, Box Plot</td>
+                        <td>Understanding how data is spread</td>
+                    </tr>
+                    <tr>
+                        <td>Compare categories</td>
+                        <td>Bar Chart</td>
+                        <td>Comparing different groups</td>
+                    </tr>
+                    <tr>
+                        <td>Show relationship</td>
+                        <td>Scatter Plot</td>
+                        <td>Finding correlation between variables</td>
+                    </tr>
+                    <tr>
+                        <td>Show trend over time</td>
+                        <td>Line Chart</td>
+                        <td>Tracking changes across time</td>
+                    </tr>
+                    <tr>
+                        <td>Show proportions</td>
+                        <td>Pie Chart</td>
+                        <td>Parts of a whole (use sparingly!)</td>
+                    </tr>
+                </table>
+                
+                <h3>Histograms for Distribution Analysis</h3>
+                <p>A histogram shows how frequently different values appear in your data. It groups data into "bins" or ranges.</p>
+                
+                <div class="key-point">
+                    <strong>Purpose:</strong> Understand the shape and distribution of your data. Is it normal? Skewed? Are there multiple peaks?
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Student Test Scores Histogram</div>
+                    <p><strong>100 students took a test. Scores grouped:</strong></p>
+                    <table>
+                        <tr>
+                            <th>Score Range</th>
+                            <th>Number of Students</th>
+                        </tr>
+                        <tr>
+                            <td>0-20</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>21-40</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>41-60</td>
+                            <td>15</td>
+                        </tr>
+                        <tr>
+                            <td>61-80</td>
+                            <td>48</td>
+                        </tr>
+                        <tr>
+                            <td>81-100</td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+                    <p><strong>Interpretation:</strong> Most students scored between 61-80. The distribution is slightly left-skewed (more high scorers). Only a few students failed.</p>
+                </div>
+                
+                <h4>What to Look for in Histograms</h4>
+                <ul>
+                    <li><strong>Normal Distribution:</strong> Bell-shaped curve, symmetric</li>
+                    <li><strong>Right-Skewed:</strong> Long tail on the right (few very high values)</li>
+                    <li><strong>Left-Skewed:</strong> Long tail on the left (few very low values)</li>
+                    <li><strong>Bimodal:</strong> Two peaks (might indicate two different groups)</li>
+                    <li><strong>Uniform:</strong> Relatively flat (all values equally likely)</li>
+                </ul>
+                
+                <h3>Box Plots for Data Spread and Outliers</h3>
+                <p>Box plots (also called box-and-whisker plots) show five key numbers: minimum, Q1, median, Q3, and maximum. They're excellent for spotting outliers.</p>
+                
+                <div class="formula">
+                    <strong>Five Number Summary:</strong><br>
+                    Minimum | Q1 (25th percentile) | Median (50th percentile) | Q3 (75th percentile) | Maximum
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Employee Salaries</div>
+                    <p><strong>Salary data for 50 employees (in thousands):</strong></p>
+                    <ul>
+                        <li><strong>Minimum:</strong> $35k</li>
+                        <li><strong>Q1:</strong> $45k (25% earn less than this)</li>
+                        <li><strong>Median:</strong> $55k (middle value)</li>
+                        <li><strong>Q3:</strong> $68k (75% earn less than this)</li>
+                        <li><strong>Maximum:</strong> $120k</li>
+                        <li><strong>Outlier:</strong> One person at $120k (CEO perhaps?)</li>
+                    </ul>
+                    
+                    <p><strong>Interpretation:</strong></p>
+                    <ul>
+                        <li>Middle 50% of employees earn between $45k-$68k</li>
+                        <li>The $120k salary is an outlier (much higher than others)</li>
+                        <li>The box shows where most salaries cluster</li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Identifying Outliers:</strong> Values beyond 1.5 × IQR (Interquartile Range) from Q1 or Q3 are typically considered outliers.<br>
+                    IQR = Q3 - Q1
+                </div>
+                
+                <h4>When to Use Box Plots</h4>
+                <ul>
+                    <li>Comparing distributions across multiple groups</li>
+                    <li>Identifying outliers quickly</li>
+                    <li>Understanding data spread at a glance</li>
+                    <li>When you have lots of data points</li>
+                </ul>
+                
+                <h3>Scatter Plots for Relationship Analysis</h3>
+                <p>Scatter plots show the relationship between two numerical variables. Each point represents one observation with values on both axes.</p>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Study Hours vs Exam Score</div>
+                    <table>
+                        <tr>
+                            <th>Student</th>
+                            <th>Study Hours</th>
+                            <th>Exam Score</th>
+                        </tr>
+                        <tr>
+                            <td>A</td>
+                            <td>2</td>
+                            <td>65</td>
+                        </tr>
+                        <tr>
+                            <td>B</td>
+                            <td>5</td>
+                            <td>78</td>
+                        </tr>
+                        <tr>
+                            <td>C</td>
+                            <td>8</td>
+                            <td>88</td>
+                        </tr>
+                        <tr>
+                            <td>D</td>
+                            <td>10</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>E</td>
+                            <td>3</td>
+                            <td>70</td>
+                        </tr>
+                    </table>
+                    <p><strong>Interpretation:</strong> Points trend upward from left to right, showing positive correlation. More study hours generally lead to higher scores.</p>
+                </div>
+                
+                <h4>Patterns in Scatter Plots</h4>
+                <ul>
+                    <li><strong>Positive Linear:</strong> Points form an upward-sloping line</li>
+                    <li><strong>Negative Linear:</strong> Points form a downward-sloping line</li>
+                    <li><strong>No Pattern:</strong> Points scattered randomly (no correlation)</li>
+                    <li><strong>Curved Pattern:</strong> Non-linear relationship</li>
+                    <li><strong>Clusters:</strong> Distinct groups visible</li>
+                </ul>
+                
+                <div class="key-point">
+                    <strong>Pro Tip:</strong> Add a "trend line" (line of best fit) to scatter plots to make the relationship clearer.
+                </div>
+                
+                <h3>Best Practices for Data Visualization</h3>
+                
+                <ol>
+                    <li><strong>Keep it Simple:</strong> Don't overcrowd with information</li>
+                    <li><strong>Label Everything:</strong> Clear titles, axis labels, and legends</li>
+                    <li><strong>Choose Colors Wisely:</strong> Use contrasting colors, avoid red-green for colorblind accessibility</li>
+                    <li><strong>Start Y-axis at Zero:</strong> For bar charts (avoids misleading viewers)</li>
+                    <li><strong>Show the Data:</strong> Include sample size and key statistics</li>
+                    <li><strong>Context Matters:</strong> Add reference lines or benchmarks when helpful</li>
+                </ol>
+                
+                <div class="note">
+                    <strong>Common Mistake:</strong> Using 3D charts when 2D would be clearer. 3D often distorts perception and makes data harder to read. Keep it flat!
+                </div>
+            </div>
+
+            <!-- Section 5: Excel for Statistical Analysis -->
+            <div class="section" id="section5">
+                <div class="section-header">
+                    <h2>5. Hands-on with Excel for Statistical Analysis<span class="duration">4 Hours</span></h2>
+                </div>
+                
+                <h3>Using Excel Functions for Descriptive Statistics</h3>
+                <p>Excel has built-in functions that make statistical calculations easy. No manual math required!</p>
+                
+                <h4>Essential Excel Functions</h4>
+                <table>
+                    <tr>
+                        <th>Function</th>
+                        <th>Purpose</th>
+                        <th>Syntax</th>
+                        <th>Example</th>
+                    </tr>
+                    <tr>
+                        <td><code>=AVERAGE()</code></td>
+                        <td>Calculate mean</td>
+                        <td>=AVERAGE(range)</td>
+                        <td>=AVERAGE(A1:A10)</td>
+                    </tr>
+                    <tr>
+                        <td><code>=MEDIAN()</code></td>
+                        <td>Find median</td>
+                        <td>=MEDIAN(range)</td>
+                        <td>=MEDIAN(A1:A10)</td>
+                    </tr>
+                    <tr>
+                        <td><code>=MODE.SNGL()</code></td>
+                        <td>Find mode</td>
+                        <td>=MODE.SNGL(range)</td>
+                        <td>=MODE.SNGL(A1:A10)</td>
+                    </tr>
+                    <tr>
+                        <td><code>=STDEV.S()</code></td>
+                        <td>Sample std deviation</td>
+                        <td>=STDEV.S(range)</td>
+                        <td>=STDEV.S(A1:A10)</td>
+                    </tr>
+                    <tr>
+                        <td><code>=VAR.S()</code></td>
+                        <td>Sample variance</td>
+                        <td>=VAR.S(range)</td>
+                        <td>=VAR.S(A1:A10)</td>
+                    </tr>
+                    <tr>
+                        <td><code>=MIN()</code></td>
+                        <td>Find minimum</td>
+                        <td>=MIN(range)</td>
+                        <td>=MIN(A1:A10)</td>
+                    </tr>
+                    <tr>
+                        <td><code>=MAX()</code></td>
+                        <td>Find maximum</td>
+                        <td>=MAX(range)</td>
+                        <td>=MAX(A1:A10)</td>
+                    </tr>
+                    <tr>
+                        <td><code>=COUNT()</code></td>
+                        <td>Count numbers</td>
+                        <td>=COUNT(range)</td>
+                        <td>=COUNT(A1:A10)</td>
+                    </tr>
+                </table>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Quick Analysis of Sales Data</div>
+                    <p><strong>Step-by-step:</strong></p>
+                    <ol>
+                        <li>Enter your data in column A (A1:A20)</li>
+                        <li>In cell C1, type "Mean" and in D1 type: <code>=AVERAGE(A1:A20)</code></li>
+                        <li>In cell C2, type "Median" and in D2 type: <code>=MEDIAN(A1:A20)</code></li>
+                        <li>In cell C3, type "Std Dev" and in D3 type: <code>=STDEV.S(A1:A20)</code></li>
+                        <li>In cell C4, type "Min" and in D4 type: <code>=MIN(A1:A20)</code></li>
+                        <li>In cell C5, type "Max" and in D5 type: <code>=MAX(A1:A20)</code></li>
+                    </ol>
+                    <p>Excel instantly calculates all statistics!</p>
+                </div>
+                
+                <h4>Using Data Analysis ToolPak</h4>
+                <p>For more advanced statistics, enable the Data Analysis ToolPak:</p>
+                <ol>
+                    <li>File → Options → Add-ins</li>
+                    <li>Select "Analysis ToolPak" → Go</li>
+                    <li>Check the box → OK</li>
+                    <li>Now available in Data tab → Data Analysis</li>
+                </ol>
+                
+                <div class="key-point">
+                    <strong>Quick Tip:</strong> Use <code>=QUARTILE.INC()</code> for Q1 and Q3 calculations. Example: <code>=QUARTILE.INC(A1:A20, 1)</code> for Q1, <code>=QUARTILE.INC(A1:A20, 3)</code> for Q3.
+                </div>
+                
+                <h3>Performing Correlation Analysis in Excel</h3>
+                
+                <h4>Method 1: Using CORREL Function</h4>
+                <div class="formula">
+                    =CORREL(array1, array2)
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Advertising Spend vs Sales</div>
+                    <p><strong>Setup:</strong></p>
+                    <ul>
+                        <li>Column A: Advertising Spend (A2:A11)</li>
+                        <li>Column B: Sales Revenue (B2:B11)</li>
+                    </ul>
+                    <p><strong>Formula:</strong> <code>=CORREL(A2:A11, B2:B11)</code></p>
+                    <p><strong>Result:</strong> 0.89 (strong positive correlation)</p>
+                </div>
+                
+                <h4>Method 2: Using Data Analysis ToolPak</h4>
+                <ol>
+                    <li>Data → Data Analysis → Correlation</li>
+                    <li>Select your input range (both columns)</li>
+                    <li>Check "Labels in first row" if applicable</li>
+                    <li>Choose output location</li>
+                    <li>Click OK</li>
+                </ol>
+                
+                <div class="note">
+                    <strong>Interpreting Results:</strong> Excel gives you the correlation coefficient (r). Remember: 0.7-1.0 is strong, 0.4-0.7 is moderate, below 0.4 is weak.
+                </div>
+                
+                <h3>Running Basic Hypothesis Tests in Excel (t-tests)</h3>
+                <p>T-tests help determine if the difference between two groups is statistically significant.</p>
+                
+                <h4>Types of T-tests</h4>
+                <ul>
+                    <li><strong>One-sample t-test:</strong> Compare sample mean to a known value</li>
+                    <li><strong>Two-sample t-test:</strong> Compare means of two independent groups</li>
+                    <li><strong>Paired t-test:</strong> Compare means of the same group at different times</li>
+                </ul>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Testing New Training Program</div>
+                    <p><strong>Scenario:</strong> Did employees' productivity improve after training?</p>
+                    <p><strong>Data:</strong></p>
+                    <ul>
+                        <li>Column A: Productivity BEFORE training (A2:A21)</li>
+                        <li>Column B: Productivity AFTER training (B2:B21)</li>
+                    </ul>
+                    
+                    <p><strong>Steps:</strong></p>
+                    <ol>
+                        <li>Data → Data Analysis → t-Test: Paired Two Sample for Means</li>
+                        <li>Variable 1 Range: A2:A21 (before)</li>
+                        <li>Variable 2 Range: B2:B21 (after)</li>
+                        <li>Hypothesized Mean Difference: 0</li>
+                        <li>Alpha: 0.05</li>
+                        <li>Choose Output location → OK</li>
+                    </ol>
+                    
+                    <p><strong>Reading Results:</strong></p>
+                    <ul>
+                        <li>Look at "P(T<=t) two-tail" value</li>
+                        <li>If p-value < 0.05: Training significantly improved productivity!</li>
+                        <li>If p-value > 0.05: No significant improvement shown</li>
+                    </ul>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Quick Decision Rule:</strong><br>
+                    p-value < 0.05 = Statistically significant (reject null hypothesis)<br>
+                    p-value ≥ 0.05 = Not statistically significant (fail to reject null hypothesis)
+                </div>
+                
+                <h3>Creating Statistical Charts in Excel</h3>
+                
+                <h4>Creating a Histogram</h4>
+                <ol>
+                    <li>Select your data</li>
+                    <li>Insert → Charts → Insert Statistic Chart → Histogram</li>
+                    <li>Right-click chart → Format Data Series to adjust bins</li>
+                    <li>Add chart title and axis labels</li>
+                </ol>
+                
+                <h4>Creating a Box Plot</h4>
+                <ol>
+                    <li>Select your data</li>
+                    <li>Insert → Charts → Insert Statistic Chart → Box and Whisker</li>
+                    <li>Excel automatically calculates quartiles and outliers</li>
+                    <li>Customize as needed</li>
+                </ol>
+                
+                <h4>Creating a Scatter Plot</h4>
+                <ol>
+                    <li>Select both columns of data (X and Y variables)</li>
+                    <li>Insert → Charts → Scatter → Scatter with only markers</li>
+                    <li>Right-click data points → Add Trendline</li>
+                    <li>Check "Display R-squared value on chart" to show correlation strength</li>
+                </ol>
+                
+                <div class="example">
+                    <div class="example-title">📝 Pro Tip: Custom Formatting</div>
+                    <ul>
+                        <li><strong>Chart Title:</strong> Click to edit, make descriptive</li>
+                        <li><strong>Axis Labels:</strong> Add Chart Elements → Axis Titles</li>
+                        <li><strong>Colors:</strong> Keep professional (avoid too many bright colors)</li>
+                        <li><strong>Gridlines:</strong> Format → Light gray (less distracting)</li>
+                        <li><strong>Legend:</strong> Only include if you have multiple series</li>
+                    </ul>
+                </div>
+                
+                <h3>Excel Shortcuts for Faster Analysis</h3>
+                <table>
+                    <tr>
+                        <th>Shortcut</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + Shift + L</td>
+                        <td>Add/remove filters</td>
+                    </tr>
+                    <tr>
+                        <td>Alt + =</td>
+                        <td>AutoSum</td>
+                    </tr>
+                    <tr>
+                        <td>F4</td>
+                        <td>Repeat last action</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + 1</td>
+                        <td>Format cells dialog</td>
+                    </tr>
+                    <tr>
+                        <td>Alt + H + O + I</td>
+                        <td>AutoFit column width</td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Section 6: Real-Life Scenarios -->
+            <div class="section" id="section6">
+                <div class="section-header">
+                    <h2>6. Mini Assignments & Real-Life Scenarios<span class="duration">6 Hours</span></h2>
+                </div>
+                
+                <h3>Applying Statistical Concepts to Small Datasets</h3>
+                
+                <div class="example">
+                    <div class="example-title">📝 Practice Problem 1: Retail Store Analysis</div>
+                    <p><strong>Scenario:</strong> A retail store tracked daily sales for 2 weeks:</p>
+                    <p>Mon: $1,200 | Tue: $980 | Wed: $1,150 | Thu: $1,320 | Fri: $2,100 | Sat: $2,450 | Sun: $1,890</p>
+                    <p>Mon: $1,180 | Tue: $1,050 | Wed: $1,200 | Thu: $1,280 | Fri: $2,200 | Sat: $2,380 | Sun: $1,920</p>
+                    
+                    <p><strong>Tasks:</strong></p>
+                    <ol>
+                        <li>Calculate mean daily sales</li>
+                        <li>Find the median</li>
+                        <li>Identify the mode (if any)</li>
+                        <li>Calculate standard deviation</li>
+                        <li>What day typically has highest sales?</li>
+                    </ol>
+                    
+                    <p><strong>Solutions:</strong></p>
+                    <ul>
+                        <li><strong>Mean:</strong> $1,593</li>
+                        <li><strong>Median:</strong> $1,200</li>
+                        <li><strong>Mode:</strong> $1,200 (appears twice)</li>
+                        <li><strong>Interpretation:</strong> Weekend sales (Fri-Sun) are consistently higher. Store should schedule more staff on these days.</li>
+                    </ul>
+                </div>
+                
+                <h3>Analyzing Case Studies with Real-World Data</h3>
+                
+                <div class="example">
+                    <div class="example-title">📝 Case Study: E-commerce Conversion Rates</div>
+                    <p><strong>Background:</strong> An online store wants to test two different homepage designs to see which converts better.</p>
+                    
+                    <p><strong>Data Collected:</strong></p>
+                    <table>
+                        <tr>
+                            <th>Design</th>
+                            <th>Visitors</th>
+                            <th>Purchases</th>
+                            <th>Conversion Rate</th>
+                        </tr>
+                        <tr>
+                            <td>Design A (Current)</td>
+                            <td>5,000</td>
+                            <td>150</td>
+                            <td>3.0%</td>
+                        </tr>
+                        <tr>
+                            <td>Design B (New)</td>
+                            <td>5,000</td>
+                            <td>185</td>
+                            <td>3.7%</td>
+                        </tr>
+                    </table>
+                    
+                    <p><strong>Analysis Steps:</strong></p>
+                    <ol>
+                        <li><strong>Identify the question:</strong> Is Design B significantly better than Design A?</li>
+                        <li><strong>Set hypotheses:</strong>
+                            <ul>
+                                <li>H₀: Both designs have the same conversion rate</li>
+                                <li>H₁: Design B has a higher conversion rate</li>
+                            </ul>
+                        </li>
+                        <li><strong>Run statistical test:</strong> Two-proportion z-test (use Excel or online calculator)</li>
+                        <li><strong>Result:</strong> p-value = 0.023</li>
+                        <li><strong>Decision:</strong> p-value < 0.05, so reject H₀</li>
+                        <li><strong>Conclusion:</strong> Design B significantly improves conversions. Implement it!</li>
+                    </ol>
+                    
+                    <p><strong>Business Impact:</strong></p>
+                    <ul>
+                        <li>0.7 percentage point improvement = 35 extra purchases per 5,000 visitors</li>
+                        <li>If average order = $50, that's $1,750 extra revenue per 5,000 visitors</li>
+                        <li>With 100,000 monthly visitors = $35,000 extra monthly revenue!</li>
+                    </ul>
+                </div>
+                
+                <h3>Identifying Appropriate Statistical Methods for Business Problems</h3>
+                
+                <table>
+                    <tr>
+                        <th>Business Question</th>
+                        <th>Statistical Method</th>
+                        <th>Why This Method</th>
+                    </tr>
+                    <tr>
+                        <td>What's our average customer lifetime value?</td>
+                        <td>Mean, Median</td>
+                        <td>Central tendency measures</td>
+                    </tr>
+                    <tr>
+                        <td>Are sales increasing over time?</td>
+                        <td>Trend Analysis</td>
+                        <td>Identifies patterns in time-series data</td>
+                    </tr>
+                    <tr>
+                        <td>Do higher prices reduce sales?</td>
+                        <td>Correlation Analysis</td>
+                        <td>Measures relationship between variables</td>
+                    </tr>
+                    <tr>
+                        <td>Is the new ad campaign effective?</td>
+                        <td>Hypothesis Testing (t-test)</td>
+                        <td>Compares before/after metrics</td>
+                    </tr>
+                    <tr>
+                        <td>Which product categories sell best?</td>
+                        <td>Descriptive Stats, Bar Charts</td>
+                        <td>Compares categories</td>
+                    </tr>
+                    <tr>
+                        <td>Are there outliers in our expense data?</td>
+                        <td>Box Plots, IQR</td>
+                        <td>Identifies unusual values</td>
+                    </tr>
+                </table>
+                
+                <h3>Interpreting Results in a Business Context</h3>
+                
+                <div class="example">
+                    <div class="example-title">📝 Case Study: Customer Satisfaction Survey</div>
+                    <p><strong>Survey Results (1-10 scale, 500 responses):</strong></p>
+                    <ul>
+                        <li>Mean: 7.8</li>
+                        <li>Median: 8.0</li>
+                        <li>Mode: 8</li>
+                        <li>Standard Deviation: 1.5</li>
+                        <li>Range: 3-10</li>
+                    </ul>
+                    
+                    <p><strong>Business Interpretation:</strong></p>
+                    
+                    <div class="key-point">
+                        <strong>Overall Assessment:</strong> Good performance with room for improvement
+                        <ul>
+                            <li><strong>Mean of 7.8:</strong> Above the midpoint (5), indicating generally satisfied customers</li>
+                            <li><strong>Median = Mode = 8:</strong> Most common response is 8, which is positive</li>
+                            <li><strong>SD of 1.5:</strong> Relatively low variability – consistent experience</li>
+                            <li><strong>Minimum of 3:</strong> Some unhappy customers exist – investigate why</li>
+                        </ul>
+                    </div>
+                    
+                    <p><strong>Action Items:</strong></p>
+                    <ol>
+                        <li><strong>Celebrate wins:</strong> 8 is the most common score – find out what we're doing right</li>
+                        <li><strong>Address outliers:</strong> Follow up with low scorers (3-5) to understand issues</li>
+                        <li><strong>Set target:</strong> Aim to move mean from 7.8 to 8.5 within 6 months</li>
+                        <li><strong>Track trends:</strong> Run survey quarterly to monitor improvement</li>
+                    </ol>
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Problem-Solving Exercise: Manufacturing Quality</div>
+                    <p><strong>Situation:</strong> A factory produces bolts that should be 10mm in diameter. Acceptable range: 9.8mm - 10.2mm.</p>
+                    
+                    <p><strong>Sample of 20 bolts measured:</strong></p>
+                    <p>10.1, 9.9, 10.0, 10.2, 9.8, 10.1, 10.0, 9.9, 10.3, 10.0, 9.9, 10.1, 10.0, 9.8, 10.2, 10.1, 9.9, 10.0, 10.1, 10.4</p>
+                    
+                    <p><strong>Statistical Analysis:</strong></p>
+                    <ul>
+                        <li>Mean: 10.04mm</li>
+                        <li>Median: 10.0mm</li>
+                        <li>SD: 0.16mm</li>
+                        <li>Out of spec: 2 bolts (10.3mm, 10.4mm)</li>
+                    </ul>
+                    
+                    <p><strong>Business Conclusions:</strong></p>
+                    <ul>
+                        <li>✅ Process is well-centered (mean ≈ target of 10mm)</li>
+                        <li>✅ Low variability (SD = 0.16mm)</li>
+                        <li>⚠️ 10% defect rate (2/20) is concerning if volume is high</li>
+                        <li>📊 Recommendation: Investigate what causes measurements above 10.2mm. Slight machine calibration needed.</li>
+                    </ul>
+                </div>
+                
+                <h3>Practice Problems to Test Understanding</h3>
+                
+                <div class="note">
+                    <strong>Exercise 1:</strong> A company's monthly revenue for the year was: $45k, $48k, $52k, $49k, $55k, $58k, $62k, $59k, $61k, $65k, $68k, $72k. What type of trend do you see? Calculate the average quarterly growth rate.
+                </div>
+                
+                <div class="note">
+                    <strong>Exercise 2:</strong> Employee A completes tasks in: 15, 18, 16, 14, 17 minutes. Employee B completes tasks in: 12, 25, 14, 28, 16 minutes. Both have similar means (~16 min). Who is more consistent? Use SD to support your answer.
+                </div>
+                
+                <div class="note">
+                    <strong>Exercise 3:</strong> A marketing team ran two email campaigns. Campaign A: 10,000 sent, 250 clicks (2.5%). Campaign B: 10,000 sent, 320 clicks (3.2%). Is this difference significant? Set up the hypothesis test.
+                </div>
+            </div>
+
+            <!-- Section 7: Predictive Analysis -->
+            <div class="section" id="section7">
+                <div class="section-header">
+                    <h2>7. Basics of Predictive Analysis Concepts<span class="duration">1 Hour</span></h2>
+                </div>
+                
+                <h3>Introduction to Predictive Modeling</h3>
+                <p>Predictive modeling uses historical data to make predictions about future events. Instead of just describing what happened (descriptive analytics), we forecast what will happen.</p>
+                
+                <div class="comparison-table">
+                    <div class="comparison-card">
+                        <h4>Descriptive Analytics</h4>
+                        <p><strong>"What happened?"</strong></p>
+                        <p>Last quarter sales were $2M</p>
+                        <p>Average customer age is 35</p>
+                        <p>Most popular product is Item X</p>
+                    </div>
+                    <div class="comparison-card">
+                        <h4>Predictive Analytics</h4>
+                        <p><strong>"What will happen?"</strong></p>
+                        <p>Next quarter sales will be $2.3M</p>
+                        <p>Customer likely to churn: 65%</p>
+                        <p>Item Y will be popular next month</p>
+                    </div>
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Real-World Example: Netflix Recommendations</div>
+                    <p>Netflix uses predictive modeling to recommend shows:</p>
+                    <ul>
+                        <li><strong>Input data:</strong> Your viewing history, ratings, time spent watching, genres preferred</li>
+                        <li><strong>Model:</strong> Analyzes patterns from millions of users</li>
+                        <li><strong>Prediction:</strong> "You'll probably enjoy Show X" (with 85% confidence)</li>
+                        <li><strong>Result:</strong> More engaging experience, less time searching</li>
+                    </ul>
+                </div>
+                
+                <h3>Overview of Common Predictive Techniques</h3>
+                
+                <h4>1. Regression Analysis</h4>
+                <p>Predicts a continuous numerical value based on input variables.</p>
+                
+                <div class="formula">
+                    <strong>Linear Regression:</strong><br>
+                    Y = a + bX<br>
+                    Y = predicted value, X = input variable, a = intercept, b = slope
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: House Price Prediction</div>
+                    <p><strong>Goal:</strong> Predict house price based on square footage</p>
+                    <p><strong>Model:</strong> Price = $50,000 + ($150 × Square Feet)</p>
+                    <p><strong>Prediction for 2,000 sq ft house:</strong></p>
+                    <p>Price = $50,000 + ($150 × 2,000) = $350,000</p>
+                    
+                    <p><strong>Use cases:</strong></p>
+                    <ul>
+                        <li>Sales forecasting</li>
+                        <li>Revenue prediction</li>
+                        <li>Demand estimation</li>
+                        <li>Risk assessment</li>
+                    </ul>
+                </div>
+                
+                <h4>2. Classification</h4>
+                <p>Predicts which category something belongs to (Yes/No, A/B/C, etc.).</p>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Email Spam Filter</div>
+                    <p><strong>Goal:</strong> Classify emails as "Spam" or "Not Spam"</p>
+                    <p><strong>Input features:</strong></p>
+                    <ul>
+                        <li>Contains words like "free," "winner," "click here"</li>
+                        <li>Sender's email domain</li>
+                        <li>Number of links</li>
+                        <li>ALL CAPS usage</li>
+                    </ul>
+                    <p><strong>Model learns:</strong> If email has 3+ suspicious features → Classify as Spam</p>
+                    
+                    <p><strong>Business use cases:</strong></p>
+                    <ul>
+                        <li>Customer churn prediction (Will they leave? Yes/No)</li>
+                        <li>Loan approval (Approve/Reject)</li>
+                        <li>Product recommendations (Will they buy? Yes/No)</li>
+                        <li>Disease diagnosis (Has disease? Yes/No)</li>
+                    </ul>
+                </div>
+                
+                <h4>3. Time Series Forecasting</h4>
+                <p>Predicts future values based on historical time-based patterns.</p>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Inventory Forecasting</div>
+                    <p><strong>Historical monthly sales:</strong></p>
+                    <p>Jan: 1,000 | Feb: 1,100 | Mar: 1,200 | Apr: 1,150 | May: 1,300 | Jun: 1,400</p>
+                    
+                    <p><strong>Pattern identified:</strong> Average growth of 8% per month</p>
+                    <p><strong>July prediction:</strong> 1,400 × 1.08 = 1,512 units</p>
+                    
+                    <p><strong>Action:</strong> Order 1,600 units for July (includes buffer) to avoid stockouts.</p>
+                </div>
+                
+                <h4>4. Clustering</h4>
+                <p>Groups similar items together based on characteristics.</p>
+                
+                <div class="example">
+                    <div class="example-title">📝 Example: Customer Segmentation</div>
+                    <p>A retail store analyzes customers and finds 3 distinct groups:</p>
+                    
+                    <table>
+                        <tr>
+                            <th>Cluster</th>
+                            <th>Characteristics</th>
+                            <th>Marketing Strategy</th>
+                        </tr>
+                        <tr>
+                            <td>Budget Shoppers</td>
+                            <td>Low spend, high discount usage</td>
+                            <td>Send coupon offers</td>
+                        </tr>
+                        <tr>
+                            <td>Premium Buyers</td>
+                            <td>High spend, brand loyal</td>
+                            <td>VIP program, exclusive previews</td>
+                        </tr>
+                        <tr>
+                            <td>Occasional Buyers</td>
+                            <td>Medium spend, seasonal</td>
+                            <td>Targeted seasonal campaigns</td>
+                        </tr>
+                    </table>
+                    
+                    <p><strong>Benefit:</strong> Personalized marketing improves conversion rates by 30%+</p>
+                </div>
+                
+                <h3>Understanding the Goal of Predictive Analysis</h3>
+                
+                <div class="key-point">
+                    <strong>Primary Goals of Predictive Analytics:</strong>
+                    <ol>
+                        <li><strong>Forecast future outcomes:</strong> What will happen?</li>
+                        <li><strong>Identify patterns:</strong> What trends exist in our data?</li>
+                        <li><strong>Optimize decisions:</strong> What's the best action to take?</li>
+                        <li><strong>Reduce risk:</strong> What problems can we prevent?</li>
+                        <li><strong>Increase efficiency:</strong> How can we improve processes?</li>
+                    </ol>
+                </div>
+                
+                <div class="example">
+                    <div class="example-title">📝 Business Application: Retail Chain</div>
+                    <p><strong>Problem:</strong> Too much inventory in some stores, not enough in others</p>
+                    
+                    <p><strong>Predictive Solution:</strong></p>
+                    <ul>
+                        <li><strong>Data collected:</strong> Sales history, weather, local events, holidays, store location</li>
+                        <li><strong>Model built:</strong> Predicts demand for each store daily</li>
+                        <li><strong>Action:</strong> Automatically redistribute inventory based on predictions</li>
+                        <li><strong>Result:</strong> 
+                            <ul>
+                                <li>20% reduction in excess inventory</li>
+                                <li>15% fewer stockouts</li>
+                                <li>$2M annual savings</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <h3>Distinguishing Predictive from Descriptive Analytics</h3>
+                
+                <table>
+                    <tr>
+                        <th>Aspect</th>
+                        <th>Descriptive Analytics</th>
+                        <th>Predictive Analytics</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Question</strong></td>
+                        <td>What happened?</td>
+                        <td>What will happen?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Time Focus</strong></td>
+                        <td>Past</td>
+                        <td>Future</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Methods</strong></td>
+                        <td>Mean, median, charts, dashboards</td>
+                        <td>Regression, ML models, forecasting</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Output</strong></td>
+                        <td>Reports, summaries, KPIs</td>
+                        <td>Predictions, probabilities, scores</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Example</strong></td>
+                        <td>"Sales were $5M last quarter"</td>
+                        <td>"Sales will be $5.5M next quarter"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Complexity</strong></td>
+                        <td>Simple to moderate</td>
+                        <td>Moderate to high</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tools</strong></td>
+                        <td>Excel, basic SQL, dashboards</td>
+                        <td>Python, R, ML platforms</td>
+                    </tr>
+                </table>
+                
+                <div class="note">
+                    <strong>Important Note:</strong> You need good descriptive analytics before doing predictive analytics! Understanding your historical data is the foundation for accurate predictions.
+                </div>
+                
+                <h3>Steps to Build a Predictive Model (Simplified)</h3>
+                
+                <ol>
+                    <li>
+                        <strong>Define the problem</strong>
+                        <p>What do you want to predict? Be specific!</p>
+                    </li>
+                    <li>
+                        <strong>Collect data</strong>
+                        <p>Gather historical data relevant to your prediction</p>
+                    </li>
+                    <li>
+                        <strong>Clean and prepare data</strong>
+                        <p>Remove errors, handle missing values, format consistently</p>
+                    </li>
+                    <li>
+                        <strong>Choose a model</strong>
+                        <p>Select appropriate technique (regression, classification, etc.)</p>
+                    </li>
+                    <li>
+                        <strong>Train the model</strong>
+                        <p>Feed historical data to the model so it learns patterns</p>
+                    </li>
+                    <li>
+                        <strong>Test the model</strong>
+                        <p>Evaluate accuracy on new data it hasn't seen before</p>
+                    </li>
+                    <li>
+                        <strong>Deploy and monitor</strong>
+                        <p>Use in real business scenarios and track performance</p>
+                    </li>
+                </ol>
+                
+                <div class="example">
+                    <div class="example-title">📝 Simple Prediction Example: Ice Cream Sales</div>
+                    <p><strong>Goal:</strong> Predict daily ice cream sales based on temperature</p>
+                    
+                    <p><strong>Historical data collected:</strong></p>
+                    <table>
+                        <tr>
+                            <th>Temperature (°F)</th>
+                            <th>Sales ($)</th>
+                        </tr>
+                        <tr><td>65</td><td>200</td></tr>
+                        <tr><td>70</td><td>250</td></tr>
+                        <tr><td>75</td><td>300</td></tr>
+                        <tr><td>80</td><td>350</td></tr>
+                        <tr><td>85</td><td>400</td></tr>
+                        <tr><td>90</td><td>450</td></tr>
+                    </table>
+                    
+                    <p><strong>Pattern discovered:</strong> For every 5°F increase, sales increase by $50</p>
+                    
+                    <p><strong>Simple model:</strong> Sales = $200 + ($10 × Temperature)</p>
+                    
+                    <p><strong>Tomorrow's forecast:</strong> 88°F</p>
+                    <p><strong>Predicted sales:</strong> $200 + ($10 × 88) = $1,080</p>
+                    
+                    <p><strong>Business action:</strong> Order extra ingredients, schedule more staff!</p>
+                </div>
+                
+                <div class="key-point">
+                    <strong>Key Takeaway:</strong> Predictive analytics turns data into actionable insights. It's not about perfect predictions – it's about making better decisions with the information you have!
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
