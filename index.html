@@ -15,7 +15,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0e7490 0%, #0f3d57 100%);
             padding: 20px;
         }
         
@@ -29,7 +29,7 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0e7490 0%, #0f3d57 100%);
             color: white;
             padding: 40px;
             text-align: center;
@@ -52,13 +52,13 @@
         .section {
             margin-bottom: 50px;
             padding: 30px;
-            background: #f8f9fa;
+            background: #f2f9fa;
             border-radius: 10px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid #0e7490;
         }
         
         .section-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #0e7490 0%, #0f3d57 100%);
             color: white;
             padding: 15px 25px;
             margin: -30px -30px 25px -30px;
@@ -80,13 +80,13 @@
         }
         
         h3 {
-            color: #667eea;
+            color: #0e7490;
             margin: 25px 0 15px 0;
             font-size: 1.4em;
         }
         
         h4 {
-            color: #764ba2;
+            color: #0f3d57;
             margin: 20px 0 10px 0;
             font-size: 1.2em;
         }
@@ -98,7 +98,7 @@
         
         .formula {
             background: #fff;
-            border: 2px solid #667eea;
+            border: 2px solid #0e7490;
             padding: 20px;
             margin: 20px 0;
             border-radius: 8px;
@@ -151,7 +151,7 @@
         }
         
         th {
-            background: #667eea;
+            background: #0e7490;
             color: white;
             padding: 12px;
             text-align: left;
@@ -167,8 +167,8 @@
         }
         
         .note {
-            background: #f3e5f5;
-            border-left: 4px solid #9c27b0;
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
             padding: 15px;
             margin: 15px 0;
             border-radius: 5px;
@@ -185,7 +185,7 @@
             background: white;
             padding: 20px;
             border-radius: 8px;
-            border: 2px solid #667eea;
+            border: 2px solid #0e7490;
         }
         
         .comparison-card h4 {
@@ -197,18 +197,18 @@
             padding: 2px 8px;
             border-radius: 3px;
             font-family: 'Courier New', monospace;
-            color: #d63384;
+            color: #e11d48;
         }
         
         .toc {
-            background: #f8f9fa;
+            background: #f2f9fa;
             padding: 25px;
             border-radius: 10px;
             margin-bottom: 30px;
         }
         
         .toc h2 {
-            color: #667eea;
+            color: #0e7490;
             margin-bottom: 15px;
         }
         
@@ -228,8 +228,17 @@
         }
         
         .toc a:hover {
-            color: #667eea;
+            color: #0e7490;
         }
+    
+        .fig{margin:20px 0;text-align:center}.fig svg{max-width:100%;height:auto;background:#fff;border:1px solid #ddd;border-radius:8px}.fig figcaption{font-size:.9em;color:#666;margin-top:6px}
+        .fig text{font-family:'Segoe UI',Tahoma,sans-serif;font-size:12px;fill:#333}
+        .new-tag{display:inline-block;background:#0f3d57;color:#fff;font-size:.6em;padding:2px 10px;border-radius:12px;vertical-align:middle;margin-left:8px}
+        td.num,th.num{text-align:right}
+            .header{border-bottom:6px solid #f59e0b}
+        .section{background:#f2f9fa}
+        .toc a:hover{color:#0e7490}
+        .fig .x{font-size:11px}
     </style>
 </head>
 <body>
@@ -369,7 +378,8 @@
                     <strong>Interpretation:</strong> A small SD means data is clustered close to the mean. A large SD means data is spread out widely.
                 </div>
                 
-                <h3>Interpreting Descriptive Statistics</h3>
+                <div class="fig"><svg viewBox="0 0 600 215" width="100%" role="img"><line x1="40" y1="160" x2="560" y2="160" stroke="#666"/><path d="M200,160 C250,160 275,30 300,30 C325,30 350,160 400,160 Z" fill="#0e7490" opacity=".35"/><path d="M200,160 C250,160 275,30 300,30 C325,30 350,160 400,160" fill="none" stroke="#0e7490" stroke-width="3"/><path d="M60,160 C180,160 240,95 300,95 C360,95 420,160 540,160" fill="none" stroke="#f59e0b" stroke-width="3"/><line x1="300" y1="20" x2="300" y2="160" stroke="#666" stroke-dasharray="4,3"/><text x="306" y="16">same mean</text><text x="395" y="60" style="fill:#0e7490;font-weight:700">Small SD</text><text x="395" y="76" class="x">A: 49, 50, 50, 51 (SD = 0.8)</text><text x="20" y="60" style="fill:#b45309;font-weight:700">Large SD</text><text x="20" y="76">B: 30, 40, 50, 60, 70 (SD = 15.8)</text><text x="300" y="188" text-anchor="middle">Both datasets have mean = 50, but B is far more spread out</text><text x="300" y="206" text-anchor="middle">Range: A = 2, B = 40</text></svg><div class="figcaption">Same mean, different spread: the standard deviation shows how tightly values cluster around the mean.</div></div>
+<h3>Interpreting Descriptive Statistics</h3>
                 
                 <div class="comparison-table">
                     <div class="comparison-card">
@@ -434,7 +444,34 @@
                         <td>Most practical measure of spread</td>
                     </tr>
                 </table>
-            </div>
+            
+<h3>Skewness and Kurtosis <span class="new-tag">Added</span></h3>
+<p><strong>Skewness</strong> measures how lopsided a distribution is. <strong>Kurtosis</strong> measures how heavy the tails are (how many extreme values to expect).</p>
+<div class="fig"><svg viewBox="0 0 600 190" width="100%" role="img"><g stroke="#999"><line x1="10" y1="130" x2="190" y2="130"/><line x1="210" y1="130" x2="390" y2="130"/><line x1="410" y1="130" x2="590" y2="130"/></g><path d="M10,130 C50,130 70,30 100,30 C130,30 150,130 190,130" fill="#d8f0f4" stroke="#0e7490" stroke-width="2"/><path d="M210,130 C230,130 240,30 255,30 C285,40 300,120 390,130" fill="#d8f0f4" stroke="#0e7490" stroke-width="2"/><path d="M410,130 C500,120 515,40 545,30 C560,30 570,130 590,130" fill="#d8f0f4" stroke="#0e7490" stroke-width="2"/><line x1="100" y1="30" x2="100" y2="130" stroke="#e11d48" stroke-width="2"/><text x="52" y="22">Mean = Median = Mode</text><line x1="255" y1="30" x2="255" y2="130" stroke="#2e7d32" stroke-width="2"/><line x1="275" y1="50" x2="275" y2="130" stroke="#ef6c00" stroke-width="2"/><line x1="300" y1="95" x2="300" y2="130" stroke="#e11d48" stroke-width="2"/><line x1="545" y1="30" x2="545" y2="130" stroke="#2e7d32" stroke-width="2"/><line x1="525" y1="50" x2="525" y2="130" stroke="#ef6c00" stroke-width="2"/><line x1="500" y1="95" x2="500" y2="130" stroke="#e11d48" stroke-width="2"/><g text-anchor="middle"><text x="100" y="150">Symmetric</text><text x="300" y="150">Right-skewed (positive)</text><text x="500" y="150">Left-skewed (negative)</text></g><text x="10" y="178"><tspan fill="#2e7d32">&#9632; Mode</tspan>  <tspan fill="#ef6c00">&#9632; Median</tspan>  <tspan fill="#e11d48">&#9632; Mean</tspan>  (the mean is pulled toward the long tail)</text></svg><div class="figcaption">Where mean, median and mode fall in symmetric and skewed data.</div></div>
+
+<table><tr><th>Shape</th><th>Relationship</th><th>Real example</th><th>Best "center"</th></tr>
+<tr><td>Symmetric</td><td>Mean ≈ Median ≈ Mode</td><td>Heights of adults</td><td>Mean</td></tr>
+<tr><td>Right-skewed</td><td>Mean &gt; Median &gt; Mode</td><td>Salaries, house prices</td><td>Median</td></tr>
+<tr><td>Left-skewed</td><td>Mean &lt; Median &lt; Mode</td><td>Exam scores on an easy test</td><td>Median</td></tr></table>
+<div class="key-point"><strong>Excel:</strong> <code>=SKEW(range)</code> and <code>=KURT(range)</code>. Skew near 0 means symmetric; above +1 or below −1 is strongly skewed.</div>
+<h3>Z-Scores and the Normal Distribution <span class="new-tag">Added</span></h3>
+<p>A <strong>z-score</strong> tells how many standard deviations a value is from the mean, so values from different scales can be compared.</p>
+<div class="formula">z = (x − mean) / standard deviation</div>
+<div class="example"><div class="example-title">📝 Example: Test Scores</div>
+<p>Scores 75, 82, 90, 68, 85 have mean = 80 and sample SD = 8.63 (squared deviations sum to 298; 298 ÷ 4 = 74.5; √74.5 = 8.63).</p>
+<table><tr><th>Score</th><th>Deviation</th><th>z-score</th><th>Meaning</th></tr>
+<tr><td>90</td><td>+10</td><td>+1.16</td><td>1.16 SD above average</td></tr><tr><td>68</td><td>−12</td><td>−1.39</td><td>1.39 SD below average</td></tr><tr><td>82</td><td>+2</td><td>+0.23</td><td>Close to average</td></tr></table>
+<p>A value with |z| &gt; 3 is usually treated as an outlier. In Excel: <code>=STANDARDIZE(90, 80, 8.63)</code> gives 1.16.</p></div>
+<div class="fig"><svg viewBox="0 0 600 215" width="100%" role="img"><defs><clipPath id="bell"><path d="M60,170 C150,170 220,25 300,25 C380,25 450,170 540,170 Z"/></clipPath></defs><g clip-path="url(#bell)"><rect x="90" y="0" width="420" height="170" fill="#c2e8ee"/><rect x="160" y="0" width="280" height="170" fill="#8fd3de"/><rect x="230" y="0" width="140" height="170" fill="#0e7490"/></g><path d="M60,170 C150,170 220,25 300,25 C380,25 450,170 540,170" fill="none" stroke="#0f3d57" stroke-width="2"/><line x1="40" y1="170" x2="560" y2="170" stroke="#666"/><g text-anchor="middle"><text x="90" y="190">-3σ</text><text x="160" y="190">-2σ</text><text x="230" y="190">-1σ</text><text x="300" y="190">μ</text><text x="370" y="190">+1σ</text><text x="440" y="190">+2σ</text><text x="510" y="190">+3σ</text><text x="300" y="120" style="fill:#fff;font-weight:700">68%</text><text x="300" y="207">z-scores: -3  -2  -1  0  +1  +2  +3</text></g><text x="10" y="16">68% of data within ±1σ</text><text x="10" y="32">95% within ±2σ</text><text x="10" y="48">99.7% within ±3σ</text></svg><div class="figcaption">The Normal Distribution and the 68-95-99.7 (empirical) rule.</div></div>
+
+<div class="example"><div class="example-title">📝 Example: Empirical Rule</div>
+<p>Delivery times are normal with mean 30 min and SD 5 min.</p>
+<ul><li>68% of deliveries take 25 to 35 minutes (30 ± 5).</li><li>95% take 20 to 40 minutes (30 ± 10).</li><li>99.7% take 15 to 45 minutes (30 ± 15). A 50-minute delivery has z = (50−30)/5 = +4, a clear outlier.</li></ul></div>
+<h3>Coefficient of Variation (CV) <span class="new-tag">Added</span></h3>
+<div class="formula">CV = (Standard deviation / Mean) × 100%</div>
+<p>CV compares the spread of datasets with different units or scales. Test scores above: 8.63 / 80 = <strong>10.8%</strong>. If another class has mean 60 and SD 12, its CV is 20%, so its scores are relatively more spread out even though the SD gap looks modest. Lower CV means more consistent data.</p>
+
+</div>
 
             <!-- Section 2: Correlation & Trend Analysis -->
             <div class="section" id="section2">
@@ -607,7 +644,30 @@
                 <div class="key-point">
                     <strong>Practical Tip:</strong> Always look at multiple time periods before confirming a trend. One or two data points don't make a trend!
                 </div>
-            </div>
+            
+<h3>Correlation Patterns at a Glance <span class="new-tag">Added</span></h3>
+<div class="fig"><svg viewBox="0 0 600 200" width="100%" role="img"><g stroke="#999"><line x1="20" y1="160" x2="190" y2="160"/><line x1="20" y1="20" x2="20" y2="160"/><line x1="220" y1="160" x2="390" y2="160"/><line x1="220" y1="20" x2="220" y2="160"/><line x1="420" y1="160" x2="590" y2="160"/><line x1="420" y1="20" x2="420" y2="160"/></g><g fill="#0e7490"><circle cx="40" cy="145" r="5"/><circle cx="70" cy="125" r="5"/><circle cx="95" cy="105" r="5"/><circle cx="125" cy="85" r="5"/><circle cx="150" cy="60" r="5"/><circle cx="175" cy="40" r="5"/><circle cx="240" cy="40" r="5"/><circle cx="270" cy="60" r="5"/><circle cx="295" cy="85" r="5"/><circle cx="325" cy="105" r="5"/><circle cx="350" cy="130" r="5"/><circle cx="375" cy="148" r="5"/><circle cx="440" cy="60" r="5"/><circle cx="465" cy="140" r="5"/><circle cx="490" cy="90" r="5"/><circle cx="520" cy="45" r="5"/><circle cx="540" cy="125" r="5"/><circle cx="570" cy="100" r="5"/><circle cx="505" cy="140" r="5"/></g><g stroke="#e11d48" stroke-width="2"><line x1="30" y1="150" x2="185" y2="35"/><line x1="230" y1="35" x2="385" y2="152"/></g><g text-anchor="middle"><text x="105" y="184">Positive (r near +1)</text><text x="305" y="184">Negative (r near -1)</text><text x="505" y="184">No correlation (r near 0)</text></g></svg><div class="figcaption">Scatter patterns for positive, negative and no correlation.</div></div>
+
+<h3>Worked Example: Calculating r by Hand <span class="new-tag">Added</span></h3>
+<div class="example"><div class="example-title">📝 Advertising Spend (X, $k) vs Sales (Y, $k)</div>
+<table><tr><th>X</th><th>Y</th><th>X − 5.2</th><th>Y − 9</th><th>(X−x̄)(Y−ȳ)</th><th>(X−x̄)²</th><th>(Y−ȳ)²</th></tr>
+<tr><td>2</td><td>4</td><td>−3.2</td><td>−5</td><td>16.0</td><td>10.24</td><td>25</td></tr>
+<tr><td>3</td><td>7</td><td>−2.2</td><td>−2</td><td>4.4</td><td>4.84</td><td>4</td></tr>
+<tr><td>5</td><td>8</td><td>−0.2</td><td>−1</td><td>0.2</td><td>0.04</td><td>1</td></tr>
+<tr><td>7</td><td>12</td><td>1.8</td><td>3</td><td>5.4</td><td>3.24</td><td>9</td></tr>
+<tr><td>9</td><td>14</td><td>3.8</td><td>5</td><td>19.0</td><td>14.44</td><td>25</td></tr>
+<tr><th>Sum</th><th></th><th></th><th></th><th>45.0</th><th>32.8</th><th>64</th></tr></table>
+<div class="formula">r = Σ(X−x̄)(Y−ȳ) / √[Σ(X−x̄)² × Σ(Y−ȳ)²] = 45 / √(32.8 × 64) = 45 / 45.82 = <strong>0.982</strong></div>
+<p><strong>Interpretation:</strong> a very strong positive linear relationship. r² = 0.964, so about 96% of the variation in sales is associated with advertising spend. Excel: <code>=CORREL(A2:A6, B2:B6)</code>. This same data is used for regression in Section 7.</p></div>
+<h3>Spearman Rank Correlation <span class="new-tag">Added</span></h3>
+<p>Pearson r needs a roughly linear relationship and numeric data. <strong>Spearman's ρ</strong> correlates the <em>ranks</em> of the values, so it works for ordinal data, outliers and curved but steadily increasing relationships. In Excel, rank both columns with <code>=RANK.AVG()</code> and apply <code>=CORREL()</code> to the ranks.</p>
+<div class="fig"><svg viewBox="0 0 600 222" width="100%" role="img"><line x1="40" y1="190" x2="580" y2="190" stroke="#666"/><polyline points="50,118.5 96,92.5 142,102.9 188,113.3 234,87.3 280,61.3 326,71.7 372,82.1 418,56.1 464,30.1 510,40.5 556,50.9" fill="none" stroke="#0e7490" stroke-width="3"/><polyline points="50,118.5 96,110.7 142,102.9 188,95.1 234,87.3 280,79.5 326,71.7 372,63.9 418,56.1 464,48.3 510,40.5 556,32.7" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-dasharray="6,4"/><g fill="#0e7490"><circle cx="50" cy="118.5" r="3.5"/><circle cx="96" cy="92.5" r="3.5"/><circle cx="142" cy="102.9" r="3.5"/><circle cx="188" cy="113.3" r="3.5"/><circle cx="234" cy="87.3" r="3.5"/><circle cx="280" cy="61.3" r="3.5"/><circle cx="326" cy="71.7" r="3.5"/><circle cx="372" cy="82.1" r="3.5"/><circle cx="418" cy="56.1" r="3.5"/><circle cx="464" cy="30.1" r="3.5"/><circle cx="510" cy="40.5" r="3.5"/><circle cx="556" cy="50.9" r="3.5"/></g><text x="60" y="22" style="fill:#0e7490;font-weight:700">&#9632; Actual data = trend + seasonality + noise</text><text x="60" y="40" style="fill:#b45309;font-weight:700">&#9644; Trend (long-term direction)</text><text x="300" y="212" text-anchor="middle">Repeating ups and downs every 4 periods = seasonality; the dashed line shows the underlying growth</text></svg><div class="figcaption">The three parts of a time series: trend, seasonality and random noise.</div></div>
+<h3>Moving Average for Trend Smoothing <span class="new-tag">Added</span></h3>
+<div class="example"><div class="example-title">📝 3-Month Moving Average</div>
+<table><tr><th>Month</th><th>Sales</th><th>3-month moving average</th></tr><tr><td>Jan</td><td>100</td><td>-</td></tr><tr><td>Feb</td><td>110</td><td>-</td></tr><tr><td>Mar</td><td>130</td><td>113.3</td></tr><tr><td>Apr</td><td>120</td><td>120.0</td></tr><tr><td>May</td><td>140</td><td>130.0</td></tr><tr><td>Jun</td><td>150</td><td>136.7</td></tr></table>
+<p>Each value averages the current and previous two months, e.g. (130 + 120 + 140) / 3 = 130. The smoothed series rises steadily, showing an upward trend despite the April dip.</p></div>
+
+</div>
 
             <!-- Section 3: Hypothesis Testing -->
             <div class="section" id="section3">
@@ -670,7 +730,8 @@
                     </div>
                 </div>
                 
-                <h3>Type I and Type II Errors</h3>
+                <h3>Type I and Type II Errors</h3><div class="fig"><svg viewBox="0 0 600 258" width="100%" role="img"><defs><clipPath id="h0"><path d="M100,170 C160,170 190,60 220,60 C250,60 280,170 340,170 Z"/></clipPath><clipPath id="h1"><path d="M250,170 C310,170 340,60 370,60 C400,60 430,170 490,170 Z"/></clipPath></defs><path d="M100,170 C160,170 190,60 220,60 C250,60 280,170 340,170 Z" fill="#d8f0f4"/><path d="M250,170 C310,170 340,60 370,60 C400,60 430,170 490,170 Z" fill="#fde7c2"/><g clip-path="url(#h1)"><rect x="300" y="0" width="300" height="170" fill="#16a34a" opacity=".35"/><rect x="0" y="0" width="300" height="170" fill="#f59e0b" opacity=".85"/></g><g clip-path="url(#h0)"><rect x="300" y="0" width="300" height="170" fill="#e11d48" opacity=".85"/></g><path d="M100,170 C160,170 190,60 220,60 C250,60 280,170 340,170" fill="none" stroke="#0e7490" stroke-width="2.5"/><path d="M250,170 C310,170 340,60 370,60 C400,60 430,170 490,170" fill="none" stroke="#b45309" stroke-width="2.5"/><line x1="40" y1="170" x2="560" y2="170" stroke="#666"/><line x1="300" y1="40" x2="300" y2="170" stroke="#0f3d57" stroke-width="2" stroke-dasharray="5,3"/><text x="300" y="34" text-anchor="middle">Critical value</text><text x="220" y="52" text-anchor="middle" style="fill:#0e7490;font-weight:700">H0 is true</text><text x="370" y="52" text-anchor="middle" style="fill:#b45309;font-weight:700">H1 is true</text><text x="200" y="190" text-anchor="middle" style="fill:#444">Do not reject H0</text><text x="400" y="190" text-anchor="middle" style="fill:#444">Reject H0</text><g><rect x="15" y="203" width="12" height="12" fill="#e11d48"/><text x="33" y="214">red = &#945; (Type I): reject H0 when it is actually true (false alarm)</text><rect x="15" y="221" width="12" height="12" fill="#f59e0b"/><text x="33" y="232">orange = &#946; (Type II): keep H0 when H1 is actually true (missed effect)</text><rect x="15" y="239" width="12" height="12" fill="#16a34a" opacity=".5"/><text x="33" y="250">green = power (1 - &#946;): correctly detecting a real effect</text></g></svg><div class="figcaption">Overlapping distributions: moving the critical value trades Type I risk against Type II risk.</div></div>
+
                 <p>In hypothesis testing, we can make two types of mistakes:</p>
                 
                 <h4>Type I Error (False Positive) - α</h4>
@@ -714,7 +775,8 @@
                     <strong>Significance Level (α):</strong> Usually set at 0.05 (5%). This means we accept a 5% chance of making a Type I error. It's our tolerance for being wrong.
                 </div>
                 
-                <h3>Basic Steps in Hypothesis Testing</h3>
+                <h3>Basic Steps in Hypothesis Testing</h3><div class="fig"><svg viewBox="0 0 600 90" width="100%" role="img"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0f3d57"/></marker></defs><rect x="10.0" y="10.0" width="104.8" height="70.0" rx="8" fill="#0e7490"/><text x="62.4" y="34.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">1</text><text x="62.4" y="49.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">State H0</text><text x="62.4" y="64.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">and H1</text><line x1="114.8" y1="45.0" x2="127.8" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="128.8" y="10.0" width="104.8" height="70.0" rx="8" fill="#0f3d57"/><text x="181.2" y="34.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">2</text><text x="181.2" y="49.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">Choose</text><text x="181.2" y="64.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">&#945; (0.05)</text><line x1="233.6" y1="45.0" x2="246.6" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="247.6" y="10.0" width="104.8" height="70.0" rx="8" fill="#0e7490"/><text x="300.0" y="34.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">3</text><text x="300.0" y="49.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">Compute test</text><text x="300.0" y="64.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">statistic</text><line x1="352.4" y1="45.0" x2="365.4" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="366.4" y="10.0" width="104.8" height="70.0" rx="8" fill="#0f3d57"/><text x="418.8" y="34.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">4</text><text x="418.8" y="49.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">Find the</text><text x="418.8" y="64.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">p-value</text><line x1="471.2" y1="45.0" x2="484.2" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="485.2" y="10.0" width="104.8" height="70.0" rx="8" fill="#f59e0b"/><text x="537.6" y="34.2" text-anchor="middle" style="fill:#0f3d57;font-size:12px;font-weight:600">5</text><text x="537.6" y="49.2" text-anchor="middle" style="fill:#0f3d57;font-size:12px;font-weight:600">Decide and</text><text x="537.6" y="64.2" text-anchor="middle" style="fill:#0f3d57;font-size:12px;font-weight:600">conclude</text></svg><div class="figcaption">Decision rule: if p-value &le; &#945; reject H0; otherwise fail to reject H0.</div></div>
+
                 
                 <div class="formula">
                     <strong>The 5-Step Process:</strong>
@@ -761,7 +823,7 @@
                     <ul><li>Sample 30 customers: Average wait = 5.8 minutes, SD = 1.2 minutes</li></ul>
                     
                     <p><strong>Step 4: Calculate p-value</strong></p>
-                    <ul><li>Using statistical software: p-value = 0.002</li></ul>
+                    <ul><li>Using statistical software: t = 3.65 with 29 degrees of freedom, p-value = 0.0005 (one-tailed). See the manual calculation in the "Worked t-test" example below</li></ul>
                     
                     <p><strong>Step 5: Make Decision</strong></p>
                     <ul>
@@ -774,7 +836,45 @@
                 <div class="note">
                     <strong>Remember:</strong> "Failing to reject H₀" is NOT the same as "accepting H₀." It just means we don't have enough evidence to say H₀ is wrong. Absence of evidence is not evidence of absence!
                 </div>
-            </div>
+            
+<h3>Standard Error and Confidence Intervals <span class="new-tag">Added</span></h3>
+<p>The <strong>standard error (SE)</strong> measures how much a sample mean varies from sample to sample. A <strong>confidence interval (CI)</strong> is a range likely to contain the true population mean.</p>
+<div class="formula">SE = s / √n<br>CI = x̄ ± t* × SE</div>
+<div class="example"><div class="example-title">📝 Example: Coffee Shop Wait Time (n = 30, mean = 5.8, SD = 1.2)</div>
+<ul><li>SE = 1.2 / √30 = 1.2 / 5.477 = <strong>0.219</strong></li><li>t* for 95% confidence, 29 degrees of freedom = <strong>2.045</strong></li><li>Margin of error = 2.045 × 0.219 = <strong>0.448</strong></li><li>95% CI = 5.8 ± 0.448 = <strong>(5.35, 6.25) minutes</strong></li></ul>
+<p>The interval does not contain 5, which agrees with rejecting H₀: mean = 5. Excel: <code>=CONFIDENCE.T(0.05, 1.2, 30)</code> returns 0.448.</p></div>
+<div class="key-point"><strong>Reading a CI:</strong> "We are 95% confident the true mean lies in this range" means that 95% of intervals built this way would capture the true mean. A larger sample or lower variability gives a narrower interval.</div>
+<div class="fig"><svg viewBox="0 0 600 140" width="100%" role="img"><line x1="50" y1="80" x2="550" y2="80" stroke="#666"/><line x1="50" y1="75" x2="50" y2="85" stroke="#666"/><text x="50" y="102" text-anchor="middle">4.5</text><line x1="150" y1="75" x2="150" y2="85" stroke="#666"/><text x="150" y="102" text-anchor="middle">5</text><line x1="250" y1="75" x2="250" y2="85" stroke="#666"/><text x="250" y="102" text-anchor="middle">5.5</text><line x1="350" y1="75" x2="350" y2="85" stroke="#666"/><text x="350" y="102" text-anchor="middle">6</text><line x1="450" y1="75" x2="450" y2="85" stroke="#666"/><text x="450" y="102" text-anchor="middle">6.5</text><line x1="550" y1="75" x2="550" y2="85" stroke="#666"/><text x="550" y="102" text-anchor="middle">7</text><rect x="219" y="62" width="180" height="12" rx="6" fill="#0e7490"/><line x1="219" y1="52" x2="219" y2="86" stroke="#0f3d57" stroke-width="2"/><line x1="400" y1="52" x2="400" y2="86" stroke="#0f3d57" stroke-width="2"/><circle cx="309" cy="68" r="7" fill="#f59e0b"/><text x="309" y="44" text-anchor="middle" style="fill:#0f3d57;font-weight:700">Sample mean 5.8</text><text x="309" y="30" text-anchor="middle">95% CI: 5.35 to 6.25</text><line x1="150" y1="40" x2="150" y2="86" stroke="#e11d48" stroke-width="2.5" stroke-dasharray="5,3"/><text x="150" y="34" text-anchor="middle" style="fill:#e11d48;font-weight:700">H0: &#956; = 5</text><text x="300" y="126" text-anchor="middle">The hypothesized value 5 lies outside the interval, so H0 is rejected at the 5% level</text></svg><div class="figcaption">Confidence interval for the coffee shop wait time (minutes).</div></div>
+<h3>Worked t-test (Manual Calculation) <span class="new-tag">Added</span></h3>
+<div class="formula">t = (x̄ − μ₀) / (s / √n) = (5.8 − 5) / (1.2 / √30) = 0.8 / 0.219 = <strong>3.65</strong></div>
+<p>Degrees of freedom = n − 1 = 29. The one-tailed critical value at α = 0.05 is 1.699. Since 3.65 &gt; 1.699 (equivalently p = 0.0005 &lt; 0.05), reject H₀. Excel: <code>=T.DIST.RT(3.65, 29)</code> gives 0.0005.</p>
+<div class="fig"><svg viewBox="0 0 600 215" width="100%" role="img"><defs><clipPath id="tail"><rect x="430" y="0" width="170" height="170"/></clipPath><clipPath id="bell2"><path d="M60,170 C150,170 220,25 300,25 C380,25 450,170 540,170 Z"/></clipPath></defs><path d="M60,170 C150,170 220,25 300,25 C380,25 450,170 540,170 Z" fill="#d8f0f4"/><g clip-path="url(#bell2)"><rect x="430" y="0" width="170" height="170" fill="#ef9a9a"/></g><path d="M60,170 C150,170 220,25 300,25 C380,25 450,170 540,170" fill="none" stroke="#0e7490" stroke-width="2"/><line x1="40" y1="170" x2="580" y2="170" stroke="#666"/><line x1="430" y1="60" x2="430" y2="170" stroke="#c62828" stroke-width="2" stroke-dasharray="5,3"/><text x="436" y="72" style="fill:#c62828">Critical value (t = 1.70)</text><line x1="515" y1="130" x2="515" y2="170" stroke="#2e7d32" stroke-width="3"/><text x="440" y="124" style="fill:#2e7d32">Observed t = 3.65</text><text x="300" y="195" text-anchor="middle">Do not reject H0 (area = 95%)</text><text x="505" y="190" text-anchor="middle" style="fill:#c62828">Reject H0 (5%)</text><text x="300" y="210" text-anchor="middle">Distribution of the test statistic if H0 is true</text></svg><div class="figcaption">One-tailed test: the observed t-statistic falls deep inside the rejection region, so the p-value is tiny.</div></div>
+
+<h3>Choosing the Right Test <span class="new-tag">Added</span></h3>
+<table><tr><th>Question</th><th>Data</th><th>Test</th><th>Excel</th></tr>
+<tr><td>Is a mean different from a known value?</td><td>Numeric, n &lt; 30 or σ unknown</td><td>One-sample t-test</td><td><code>T.DIST.RT</code>, ToolPak</td></tr>
+<tr><td>Is a mean different from a known value?</td><td>Numeric, σ known, large n</td><td>z-test</td><td><code>Z.TEST</code></td></tr>
+<tr><td>Do two groups have different means?</td><td>Numeric, two groups</td><td>Two-sample t-test</td><td><code>T.TEST</code></td></tr>
+<tr><td>Same subjects measured before and after?</td><td>Numeric, paired</td><td>Paired t-test</td><td><code>T.TEST(…,1)</code></td></tr>
+<tr><td>Do three or more groups differ?</td><td>Numeric, 3+ groups</td><td>ANOVA</td><td>ToolPak: Anova Single Factor</td></tr>
+<tr><td>Are two categories related?</td><td>Counts in categories</td><td>Chi-square test</td><td><code>CHISQ.TEST</code></td></tr>
+<tr><td>Is there a linear relationship?</td><td>Two numeric variables</td><td>Correlation / regression test</td><td><code>CORREL</code>, <code>LINEST</code></td></tr></table>
+<h3>Worked Chi-Square Test of Independence <span class="new-tag">Added</span></h3>
+<div class="example"><div class="example-title">📝 Does product preference depend on gender?</div>
+<p>H₀: preference and gender are independent. H₁: they are related. α = 0.05.</p>
+<table><tr><th>Observed</th><th>Product A</th><th>Product B</th><th>Total</th></tr><tr><td>Male</td><td>30</td><td>20</td><td>50</td></tr><tr><td>Female</td><td>20</td><td>30</td><td>50</td></tr><tr><td>Total</td><td>50</td><td>50</td><td>100</td></tr></table>
+<p>Expected count per cell = (row total × column total) / grand total = 50 × 50 / 100 = 25.</p>
+<div class="formula">χ² = Σ (Observed − Expected)² / Expected = 4 × (5² / 25) = <strong>4.0</strong></div>
+<p>Degrees of freedom = (rows−1)(columns−1) = 1; critical value at α = 0.05 is 3.84. Since 4.0 &gt; 3.84 (p = 0.0455), <strong>reject H₀</strong>: preference is associated with gender. Excel: <code>=CHISQ.DIST.RT(4, 1)</code>.</p></div>
+<h3>ANOVA: Comparing Three or More Means <span class="new-tag">Added</span></h3>
+<p>Running many t-tests inflates the Type I error. <strong>ANOVA</strong> tests all groups at once using the F-ratio: variation <em>between</em> groups divided by variation <em>within</em> groups.</p>
+<div class="example"><div class="example-title">📝 Delivery Time (minutes) from Three Warehouses</div>
+<p>A: 5, 6, 7 (mean 6) · B: 8, 9, 10 (mean 9) · C: 4, 5, 6 (mean 5) · Grand mean = 6.67</p>
+<table><tr><th>Source</th><th>Sum of squares</th><th>df</th><th>Mean square</th><th>F</th><th>p-value</th></tr><tr><td>Between groups</td><td>26</td><td>2</td><td>13</td><td>13.0</td><td>0.0066</td></tr><tr><td>Within groups</td><td>6</td><td>6</td><td>1</td><td></td><td></td></tr></table>
+<p>Between SS = 3 × [(6−6.67)² + (9−6.67)² + (5−6.67)²] = 26. Within SS = 2 + 2 + 2 = 6. Since p = 0.0066 &lt; 0.05, at least one warehouse mean differs. A follow-up (post-hoc) test such as Tukey's shows which one: here B is slowest.</p></div>
+<div class="note"><strong>Statistical vs practical significance:</strong> with a very large sample even a tiny difference gives p &lt; 0.05. Always report the effect size (difference in means, r, CI) and ask whether it matters for the business.</div>
+
+</div>
 
             <!-- Section 4: Visualizing Statistical Data -->
             <div class="section" id="section4">
@@ -782,7 +882,8 @@
                     <h2>4. Visualizing Statistical Data<span class="duration">2 Hours</span></h2>
                 </div>
                 
-                <h3>Choosing Appropriate Visualizations</h3>
+                <h3>Choosing Appropriate Visualizations</h3><div class="fig"><svg viewBox="0 0 600 214" width="100%" role="img"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0f3d57"/></marker></defs><rect x="190.0" y="8.0" width="220.0" height="34.0" rx="8" fill="#0f3d57"/><text x="300.0" y="29.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">What do you want to show?</text><path d="M300.0,42.0 V64.0 H64.0 V86.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="10.0" y="86.0" width="108.0" height="46.0" rx="8" fill="#0e7490"/><text x="64.0" y="105.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">Compare</text><text x="64.0" y="119.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">categories</text><line x1="64.0" y1="132.0" x2="64.0" y2="158.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="10.0" y="158.0" width="108.0" height="46.0" rx="8" fill="#f59e0b"/><text x="64.0" y="184.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Bar / column</text><path d="M300.0,42.0 V64.0 H182.0 V86.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="128.0" y="86.0" width="108.0" height="46.0" rx="8" fill="#0e7490"/><text x="182.0" y="105.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">Show a trend</text><text x="182.0" y="119.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">over time</text><line x1="182.0" y1="132.0" x2="182.0" y2="158.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="128.0" y="158.0" width="108.0" height="46.0" rx="8" fill="#f59e0b"/><text x="182.0" y="184.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Line chart</text><path d="M300.0,42.0 V64.0 H300.0 V86.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="246.0" y="86.0" width="108.0" height="46.0" rx="8" fill="#0e7490"/><text x="300.0" y="105.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">See the</text><text x="300.0" y="119.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">distribution</text><line x1="300.0" y1="132.0" x2="300.0" y2="158.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="246.0" y="158.0" width="108.0" height="46.0" rx="8" fill="#f59e0b"/><text x="300.0" y="177.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Histogram /</text><text x="300.0" y="191.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">box plot</text><path d="M300.0,42.0 V64.0 H418.0 V86.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="364.0" y="86.0" width="108.0" height="46.0" rx="8" fill="#0e7490"/><text x="418.0" y="105.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">Relate two</text><text x="418.0" y="119.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">numbers</text><line x1="418.0" y1="132.0" x2="418.0" y2="158.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="364.0" y="158.0" width="108.0" height="46.0" rx="8" fill="#f59e0b"/><text x="418.0" y="184.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Scatter plot</text><path d="M300.0,42.0 V64.0 H536.0 V86.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="482.0" y="86.0" width="108.0" height="46.0" rx="8" fill="#0e7490"/><text x="536.0" y="105.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">Show parts</text><text x="536.0" y="119.8" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">of a whole</text><line x1="536.0" y1="132.0" x2="536.0" y2="158.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="482.0" y="158.0" width="108.0" height="46.0" rx="8" fill="#f59e0b"/><text x="536.0" y="177.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Stacked bar /</text><text x="536.0" y="191.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">donut (few)</text></svg><div class="figcaption">Start with the question you want to answer, then pick the chart.</div></div>
+
                 <p>The right chart makes data easy to understand. The wrong chart confuses people. Here's how to choose:</p>
                 
                 <table>
@@ -974,7 +1075,20 @@
                 <div class="note">
                     <strong>Common Mistake:</strong> Using 3D charts when 2D would be clearer. 3D often distorts perception and makes data harder to read. Keep it flat!
                 </div>
-            </div>
+            
+<h3>Reading Histograms and Box Plots <span class="new-tag">Added</span></h3>
+<div class="fig"><svg viewBox="0 0 600 230" width="100%" role="img"><line x1="25" y1="170" x2="285" y2="170" stroke="#666"/><g fill="#0e7490"><rect x="30" y="140" width="34" height="30"/><rect x="66" y="110" width="34" height="60"/><rect x="102" y="60" width="34" height="110"/><rect x="138" y="30" width="34" height="140"/><rect x="174" y="80" width="34" height="90"/><rect x="210" y="120" width="34" height="50"/><rect x="246" y="150" width="34" height="20"/></g><g text-anchor="middle" class="sm"><text x="47" y="186">40s</text><text x="83" y="186">50s</text><text x="119" y="186">60s</text><text x="155" y="186">70s</text><text x="191" y="186">80s</text><text x="227" y="186">90s</text><text x="263" y="186">100</text></g><text x="155" y="215" text-anchor="middle">Histogram: bell-shaped, centered near 70</text><line x1="330" y1="150" x2="590" y2="150" stroke="#666"/><line x1="350" y1="95" x2="440" y2="95" stroke="#333" stroke-width="2"/><line x1="500" y1="95" x2="550" y2="95" stroke="#333" stroke-width="2"/><rect x="440" y="65" width="60" height="60" fill="#d8f0f4" stroke="#0e7490" stroke-width="2"/><line x1="470" y1="65" x2="470" y2="125" stroke="#e11d48" stroke-width="3"/><circle cx="580" cy="95" r="5" fill="none" stroke="#c62828" stroke-width="2"/><g text-anchor="middle" class="sm"><text x="350" y="120">Min</text><text x="440" y="145">Q1</text><text x="470" y="58">Median</text><text x="500" y="145">Q3</text><text x="550" y="120">Max (whisker)</text><text x="580" y="78" style="fill:#c62828">Outlier</text></g><text x="460" y="215" text-anchor="middle">Box plot: box = middle 50% (IQR = Q3 - Q1)</text></svg><div class="figcaption">The same dataset shown as a histogram (shape) and a box plot (spread and outliers).</div></div>
+
+<div class="example"><div class="example-title">📝 Outlier Rule (1.5 × IQR)</div>
+<p>Data: 4, 6, 7, 8, 9, 10, 12, 30. Q1 = 6.5, Q3 = 11, IQR = 4.5.</p>
+<ul><li>Lower fence = 6.5 − 1.5 × 4.5 = −0.25</li><li>Upper fence = 11 + 1.5 × 4.5 = 17.75</li><li>30 is above 17.75, so it is plotted as an outlier dot beyond the whisker.</li></ul></div>
+<table><tr><th>What you see</th><th>What it means</th><th>Action</th></tr>
+<tr><td>Histogram with a long right tail</td><td>Right skew</td><td>Report the median; consider a log scale</td></tr>
+<tr><td>Two peaks</td><td>Two groups mixed together</td><td>Split by category</td></tr>
+<tr><td>Box plot median off-center in the box</td><td>Skewed data</td><td>Compare to the mean</td></tr>
+<tr><td>Dots beyond the whiskers</td><td>Outliers</td><td>Check for data errors before removing</td></tr></table>
+
+</div>
 
             <!-- Section 5: Excel for Statistical Analysis -->
             <div class="section" id="section5">
@@ -982,7 +1096,8 @@
                     <h2>5. Hands-on with Excel for Statistical Analysis<span class="duration">4 Hours</span></h2>
                 </div>
                 
-                <h3>Using Excel Functions for Descriptive Statistics</h3>
+                <h3>Using Excel Functions for Descriptive Statistics</h3><div class="fig"><svg viewBox="0 0 600 90" width="100%" role="img"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0f3d57"/></marker></defs><rect x="10.0" y="10.0" width="104.8" height="70.0" rx="8" fill="#0e7490"/><text x="62.4" y="34.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">Clean</text><text x="62.4" y="48.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">(remove blanks,</text><text x="62.4" y="62.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">duplicates)</text><line x1="114.8" y1="45.0" x2="127.8" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="128.8" y="10.0" width="104.8" height="70.0" rx="8" fill="#0f3d57"/><text x="181.2" y="34.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">Describe</text><text x="181.2" y="48.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">(AVERAGE,</text><text x="181.2" y="62.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">STDEV.S)</text><line x1="233.6" y1="45.0" x2="246.6" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="247.6" y="10.0" width="104.8" height="70.0" rx="8" fill="#0e7490"/><text x="300.0" y="34.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">Visualize</text><text x="300.0" y="48.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">(charts,</text><text x="300.0" y="62.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">PivotTables)</text><line x1="352.4" y1="45.0" x2="365.4" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="366.4" y="10.0" width="104.8" height="70.0" rx="8" fill="#0f3d57"/><text x="418.8" y="34.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">Test</text><text x="418.8" y="48.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">(T.TEST, CORREL,</text><text x="418.8" y="62.9" text-anchor="middle" style="fill:#fff;font-size:11px;font-weight:600">ToolPak)</text><line x1="471.2" y1="45.0" x2="484.2" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="485.2" y="10.0" width="104.8" height="70.0" rx="8" fill="#f59e0b"/><text x="537.6" y="34.9" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Report</text><text x="537.6" y="48.9" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">(conclusion</text><text x="537.6" y="62.9" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">and action)</text></svg><div class="figcaption">A repeatable analysis workflow in Excel.</div></div>
+
                 <p>Excel has built-in functions that make statistical calculations easy. No manual math required!</p>
                 
                 <h4>Essential Excel Functions</h4>
@@ -1208,7 +1323,27 @@
                         <td>AutoFit column width</td>
                     </tr>
                 </table>
-            </div>
+            
+<h3>More Excel Functions with Results <span class="new-tag">Added</span></h3>
+<p>Using the examples in this guide (advertising X in A2:A6 = 2, 3, 5, 7, 9; sales Y in B2:B6 = 4, 7, 8, 12, 14):</p>
+<table><tr><th>Purpose</th><th>Formula</th><th>Result</th></tr>
+<tr><td>Z-score of 90 (mean 80, SD 8.63)</td><td><code>=STANDARDIZE(90,80,8.63)</code></td><td>1.16</td></tr>
+<tr><td>Probability below z = 1.16</td><td><code>=NORM.S.DIST(1.16,TRUE)</code></td><td>0.877</td></tr>
+<tr><td>Quartiles</td><td><code>=QUARTILE.INC(range,1)</code></td><td>Q1</td></tr>
+<tr><td>Skewness / kurtosis</td><td><code>=SKEW(range)</code>, <code>=KURT(range)</code></td><td>Shape</td></tr>
+<tr><td>Correlation</td><td><code>=CORREL(A2:A6,B2:B6)</code></td><td>0.982</td></tr>
+<tr><td>Slope</td><td><code>=SLOPE(B2:B6,A2:A6)</code></td><td>1.372</td></tr>
+<tr><td>Intercept</td><td><code>=INTERCEPT(B2:B6,A2:A6)</code></td><td>1.866</td></tr>
+<tr><td>R-squared</td><td><code>=RSQ(B2:B6,A2:A6)</code></td><td>0.964</td></tr>
+<tr><td>Predict sales at X = 6</td><td><code>=FORECAST.LINEAR(6,B2:B6,A2:A6)</code></td><td>10.10</td></tr>
+<tr><td>Margin of error (95% CI)</td><td><code>=CONFIDENCE.T(0.05,1.2,30)</code></td><td>0.448</td></tr>
+<tr><td>One-tailed p-value for t = 3.65</td><td><code>=T.DIST.RT(3.65,29)</code></td><td>0.0005</td></tr>
+<tr><td>Chi-square p-value</td><td><code>=CHISQ.DIST.RT(4,1)</code></td><td>0.0455</td></tr>
+<tr><td>ANOVA p-value</td><td><code>=F.DIST.RT(13,2,6)</code></td><td>0.0066</td></tr>
+<tr><td>Two-sample t-test p-value</td><td><code>=T.TEST(range1,range2,2,3)</code></td><td>p-value</td></tr></table>
+<div class="key-point"><strong>ANOVA in Excel:</strong> Data → Data Analysis → <em>Anova: Single Factor</em>, select the group columns, tick Labels, set α = 0.05. Read the F and P-value in the output table. Enable the ToolPak first via File → Options → Add-ins.</div>
+
+</div>
 
             <!-- Section 6: Real-Life Scenarios -->
             <div class="section" id="section6">
@@ -1293,7 +1428,8 @@
                     </ul>
                 </div>
                 
-                <h3>Identifying Appropriate Statistical Methods for Business Problems</h3>
+                <h3>Identifying Appropriate Statistical Methods for Business Problems</h3><div class="fig"><svg viewBox="0 0 600 256" width="100%" role="img"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0f3d57"/></marker></defs><rect x="200.0" y="6.0" width="200.0" height="34.0" rx="8" fill="#0f3d57"/><text x="300.0" y="27.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">Type of outcome variable?</text><path d="M300.0,40.0 V55.0 H140.0 V70.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="70.0" y="70.0" width="140.0" height="34.0" rx="8" fill="#0e7490"/><text x="140.0" y="91.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">Numeric (measured)</text><path d="M300.0,40.0 V55.0 H500.0 V70.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="430.0" y="70.0" width="140.0" height="34.0" rx="8" fill="#0e7490"/><text x="500.0" y="91.2" text-anchor="middle" style="fill:#fff;font-size:12px;font-weight:600">Categories (counts)</text><path d="M140.0,104.0 V120.0 H54.0 V136.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="8.0" y="136.0" width="92.0" height="40.0" rx="8" fill="#fff" stroke="#0e7490" stroke-width="2"/><text x="54.0" y="152.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">1 group vs a</text><text x="54.0" y="166.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">known value</text><line x1="54.0" y1="176.0" x2="54.0" y2="198.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="8.0" y="198.0" width="92.0" height="50.0" rx="8" fill="#f59e0b"/><text x="54.0" y="219.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">One-sample</text><text x="54.0" y="233.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">t-test</text><path d="M140.0,104.0 V120.0 H154.0 V136.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="108.0" y="136.0" width="92.0" height="40.0" rx="8" fill="#fff" stroke="#0e7490" stroke-width="2"/><text x="154.0" y="159.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">2 groups</text><line x1="154.0" y1="176.0" x2="154.0" y2="198.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="108.0" y="198.0" width="92.0" height="50.0" rx="8" fill="#f59e0b"/><text x="154.0" y="212.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Two-sample</text><text x="154.0" y="226.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">t-test (paired</text><text x="154.0" y="240.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">if same subjects)</text><path d="M140.0,104.0 V120.0 H254.0 V136.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="208.0" y="136.0" width="92.0" height="40.0" rx="8" fill="#fff" stroke="#0e7490" stroke-width="2"/><text x="254.0" y="152.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">3 or more</text><text x="254.0" y="166.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">groups</text><line x1="254.0" y1="176.0" x2="254.0" y2="198.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="208.0" y="198.0" width="92.0" height="50.0" rx="8" fill="#f59e0b"/><text x="254.0" y="226.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">ANOVA</text><path d="M140.0,104.0 V120.0 H354.0 V136.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="308.0" y="136.0" width="92.0" height="40.0" rx="8" fill="#fff" stroke="#0e7490" stroke-width="2"/><text x="354.0" y="152.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">2 numeric</text><text x="354.0" y="166.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">variables</text><line x1="354.0" y1="176.0" x2="354.0" y2="198.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="308.0" y="198.0" width="92.0" height="50.0" rx="8" fill="#f59e0b"/><text x="354.0" y="219.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Correlation /</text><text x="354.0" y="233.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">regression</text><path d="M500.0,104.0 V120.0 H500.0 V136.0" fill="none" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="454.0" y="136.0" width="92.0" height="40.0" rx="8" fill="#fff" stroke="#0e7490" stroke-width="2"/><text x="500.0" y="152.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Two categorical</text><text x="500.0" y="166.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">variables</text><line x1="500.0" y1="176.0" x2="500.0" y2="198.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="454.0" y="198.0" width="92.0" height="50.0" rx="8" fill="#f59e0b"/><text x="500.0" y="219.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">Chi-square</text><text x="500.0" y="233.8" text-anchor="middle" style="fill:#0f3d57;font-size:11px;font-weight:600">test</text></svg><div class="figcaption">Decision guide for picking a statistical test.</div></div>
+
                 
                 <table>
                     <tr>
@@ -1622,7 +1758,8 @@
                     <strong>Important Note:</strong> You need good descriptive analytics before doing predictive analytics! Understanding your historical data is the foundation for accurate predictions.
                 </div>
                 
-                <h3>Steps to Build a Predictive Model (Simplified)</h3>
+                <h3>Steps to Build a Predictive Model (Simplified)</h3><div class="fig"><svg viewBox="0 0 600 90" width="100%" role="img"><defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#0f3d57"/></marker></defs><rect x="10.0" y="10.0" width="70.9" height="70.0" rx="8" fill="#0e7490"/><text x="45.4" y="35.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">1</text><text x="45.4" y="48.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">Define</text><text x="45.4" y="61.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">goal</text><line x1="80.9" y1="45.0" x2="93.9" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="94.9" y="10.0" width="70.9" height="70.0" rx="8" fill="#0f3d57"/><text x="130.3" y="35.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">2</text><text x="130.3" y="48.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">Collect</text><text x="130.3" y="61.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">data</text><line x1="165.7" y1="45.0" x2="178.7" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="179.7" y="10.0" width="70.9" height="70.0" rx="8" fill="#0e7490"/><text x="215.1" y="35.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">3</text><text x="215.1" y="48.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">Clean and</text><text x="215.1" y="61.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">prepare</text><line x1="250.6" y1="45.0" x2="263.6" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="264.6" y="10.0" width="70.9" height="70.0" rx="8" fill="#0f3d57"/><text x="300.0" y="35.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">4</text><text x="300.0" y="48.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">Split</text><text x="300.0" y="61.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">train/test</text><line x1="335.4" y1="45.0" x2="348.4" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="349.4" y="10.0" width="70.9" height="70.0" rx="8" fill="#0e7490"/><text x="384.9" y="35.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">5</text><text x="384.9" y="48.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">Train</text><text x="384.9" y="61.5" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">model</text><line x1="420.3" y1="45.0" x2="433.3" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="434.3" y="10.0" width="70.9" height="70.0" rx="8" fill="#0f3d57"/><text x="469.7" y="42.0" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">6</text><text x="469.7" y="55.0" text-anchor="middle" style="fill:#fff;font-size:10px;font-weight:600">Evaluate</text><line x1="505.1" y1="45.0" x2="518.1" y2="45.0" stroke="#0f3d57" stroke-width="2" marker-end="url(#ah)"/><rect x="519.1" y="10.0" width="70.9" height="70.0" rx="8" fill="#f59e0b"/><text x="554.6" y="35.5" text-anchor="middle" style="fill:#0f3d57;font-size:10px;font-weight:600">7</text><text x="554.6" y="48.5" text-anchor="middle" style="fill:#0f3d57;font-size:10px;font-weight:600">Deploy and</text><text x="554.6" y="61.5" text-anchor="middle" style="fill:#0f3d57;font-size:10px;font-weight:600">monitor</text></svg><div class="figcaption">The predictive modeling lifecycle. In practice you loop back from evaluation to earlier steps.</div></div>
+
                 
                 <ol>
                     <li>
@@ -1686,7 +1823,37 @@
                 <div class="key-point">
                     <strong>Key Takeaway:</strong> Predictive analytics turns data into actionable insights. It's not about perfect predictions – it's about making better decisions with the information you have!
                 </div>
-            </div>
+            
+<h3>Linear Regression in Detail <span class="new-tag">Added</span></h3>
+<p>Simple linear regression fits the line <strong>Y = a + bX</strong> that minimizes the sum of squared residuals (actual − predicted).</p>
+<div class="formula">b (slope) = Σ(X−x̄)(Y−ȳ) / Σ(X−x̄)² = 45 / 32.8 = <strong>1.372</strong><br>a (intercept) = ȳ − b·x̄ = 9 − 1.372 × 5.2 = <strong>1.866</strong></div>
+<div class="fig"><svg viewBox="0 0 600 230" width="100%" role="img"><line x1="50" y1="190" x2="560" y2="190" stroke="#666"/><line x1="50" y1="10" x2="50" y2="190" stroke="#666"/><line x1="50" y1="169" x2="550" y2="15" stroke="#e11d48" stroke-width="2.5"/><g stroke="#c62828" stroke-dasharray="3,2"><line x1="150" y1="145" x2="150" y2="138"/><line x1="200" y1="111" x2="200" y2="123"/><line x1="300" y1="100" x2="300" y2="92"/><line x1="400" y1="55" x2="400" y2="61"/><line x1="500" y1="32" x2="500" y2="30"/></g><g fill="#0e7490"><circle cx="150" cy="145" r="6"/><circle cx="200" cy="111" r="6"/><circle cx="300" cy="100" r="6"/><circle cx="400" cy="55" r="6"/><circle cx="500" cy="32" r="6"/></g><g text-anchor="middle"><text x="150" y="206">2</text><text x="200" y="206">3</text><text x="300" y="206">5</text><text x="400" y="206">7</text><text x="500" y="206">9</text><text x="305" y="224">Advertising spend (X, $k)</text></g><text x="12" y="20">Sales</text><text x="300" y="130" style="fill:#e11d48">Y = 1.866 + 1.372 X</text><text x="420" y="110" style="fill:#c62828">dashed = residuals</text></svg><div class="figcaption">Regression line through the advertising vs sales data. Short dashed lines are residuals.</div></div>
+
+<div class="example"><div class="example-title">📝 Using the Model</div>
+<ul><li><strong>Slope meaning:</strong> each extra $1k of advertising is associated with about $1.37k more sales.</li><li><strong>Prediction:</strong> at X = 6, Sales = 1.866 + 1.372 × 6 = <strong>10.10</strong> ($10.1k).</li><li><strong>R² = 0.964:</strong> 1 − (SS residual / SS total) = 1 − (2.3 / 64) ≈ 96.4% of variation explained.</li></ul>
+<table><tr><th>X</th><th>Actual Y</th><th>Predicted Y</th><th>Residual</th></tr><tr><td>2</td><td>4</td><td>4.61</td><td>−0.61</td></tr><tr><td>3</td><td>7</td><td>5.98</td><td>+1.02</td></tr><tr><td>5</td><td>8</td><td>8.73</td><td>−0.73</td></tr><tr><td>7</td><td>12</td><td>11.47</td><td>+0.53</td></tr><tr><td>9</td><td>14</td><td>14.21</td><td>−0.21</td></tr></table>
+<p>Residuals add up to 0. Check that they show no pattern; a curve or fan shape means the linear model is not appropriate.</p></div>
+<div class="note"><strong>Caution:</strong> do not predict far outside the data range (extrapolation), and remember that correlation does not prove that advertising <em>causes</em> sales.</div>
+<div class="fig"><svg viewBox="0 0 600 176" width="100%" role="img"><g transform="translate(0,0)"><line x1="10" y1="140" x2="195" y2="140" stroke="#666"/><line x1="10" y1="10" x2="10" y2="140" stroke="#666"/><line x1="15" y1="78" x2="190" y2="78" stroke="#e11d48" stroke-width="3"/><g fill="#0e7490"><circle cx="20" cy="120" r="4.5"/><circle cx="45" cy="92" r="4.5"/><circle cx="70" cy="72" r="4.5"/><circle cx="95" cy="86" r="4.5"/><circle cx="120" cy="58" r="4.5"/><circle cx="145" cy="44" r="4.5"/><circle cx="170" cy="56" r="4.5"/><circle cx="188" cy="30" r="4.5"/></g><text x="100" y="165" text-anchor="middle" style="font-weight:700">Underfit: too simple</text></g><g transform="translate(200,0)"><line x1="10" y1="140" x2="195" y2="140" stroke="#666"/><line x1="10" y1="10" x2="10" y2="140" stroke="#666"/><path d="M15,120 C70,85 130,55 190,34" fill="none" stroke="#16a34a" stroke-width="3"/><g fill="#0e7490"><circle cx="20" cy="120" r="4.5"/><circle cx="45" cy="92" r="4.5"/><circle cx="70" cy="72" r="4.5"/><circle cx="95" cy="86" r="4.5"/><circle cx="120" cy="58" r="4.5"/><circle cx="145" cy="44" r="4.5"/><circle cx="170" cy="56" r="4.5"/><circle cx="188" cy="30" r="4.5"/></g><text x="100" y="165" text-anchor="middle" style="font-weight:700">Good fit: captures the pattern</text></g><g transform="translate(400,0)"><line x1="10" y1="140" x2="195" y2="140" stroke="#666"/><line x1="10" y1="10" x2="10" y2="140" stroke="#666"/><polyline points="20,120 45,92 70,72 95,86 120,58 145,44 170,56 188,30" fill="none" stroke="#e11d48" stroke-width="3"/><g fill="#0e7490"><circle cx="20" cy="120" r="4.5"/><circle cx="45" cy="92" r="4.5"/><circle cx="70" cy="72" r="4.5"/><circle cx="95" cy="86" r="4.5"/><circle cx="120" cy="58" r="4.5"/><circle cx="145" cy="44" r="4.5"/><circle cx="170" cy="56" r="4.5"/><circle cx="188" cy="30" r="4.5"/></g><text x="100" y="165" text-anchor="middle" style="font-weight:700">Overfit: memorizes the noise</text></g></svg><div class="figcaption">Same data, three models: the overfit line hits every point but would predict new data poorly.</div></div>
+<h3>Train/Test Split and Model Fit <span class="new-tag">Added</span></h3>
+<div class="comparison-table">
+<div class="comparison-card"><h4>Training data (about 70-80%)</h4><p>Used to fit the model. Performance here can look too good.</p></div>
+<div class="comparison-card"><h4>Test data (about 20-30%)</h4><p>Held back and used only to measure how the model performs on new data.</p></div></div>
+<table><tr><th>Problem</th><th>Symptom</th><th>Fix</th></tr>
+<tr><td>Underfitting</td><td>Poor on training and test data</td><td>Add useful variables, use a more flexible model</td></tr>
+<tr><td>Overfitting</td><td>Great on training, poor on test data</td><td>Simplify the model, get more data, cross-validate</td></tr></table>
+<h3>Evaluating Classification Models <span class="new-tag">Added</span></h3>
+<div class="example"><div class="example-title">📝 Customer Churn Predictions (100 customers)</div>
+<table><tr><th></th><th>Predicted: Churn</th><th>Predicted: Stay</th></tr><tr><th>Actual: Churn</th><td>40 (true positive)</td><td>5 (false negative)</td></tr><tr><th>Actual: Stay</th><td>10 (false positive)</td><td>45 (true negative)</td></tr></table>
+<ul><li><strong>Accuracy</strong> = (40 + 45) / 100 = <strong>85%</strong></li><li><strong>Precision</strong> = 40 / (40 + 10) = <strong>80%</strong> (of predicted churners, how many really churn)</li><li><strong>Recall</strong> = 40 / (40 + 5) = <strong>88.9%</strong> (of real churners, how many we caught)</li><li><strong>F1 score</strong> = 2 × 0.80 × 0.889 / (0.80 + 0.889) = <strong>0.84</strong></li></ul>
+<p>When missing a churner is costly, favor recall; when a false alarm is costly, favor precision.</p></div>
+<h3>Error Metrics for Numeric Predictions <span class="new-tag">Added</span></h3>
+<table><tr><th>Metric</th><th>Formula</th><th>Our regression</th></tr>
+<tr><td>MAE (mean absolute error)</td><td>Average of |residual|</td><td>(0.61+1.02+0.73+0.53+0.21) / 5 = 0.62</td></tr>
+<tr><td>RMSE</td><td>√(average of residual²)</td><td>√(2.3 / 5) = 0.68</td></tr>
+<tr><td>R²</td><td>1 − SSres / SStotal</td><td>0.964</td></tr></table>
+
+</div>
 
         </div>
     </div>
